@@ -26,6 +26,9 @@ A darker reading of the same architecture — the **quarantine reading** — is 
 |---|---|---|
 | v1.0 | [`paper/v1/simulation-theory.pdf`](paper/v1/simulation-theory.pdf) | [DOI 10.5281/zenodo.23380886](https://doi.org/10.5281/zenodo.23380886) |
 | v2.0 | [`paper/v2/simulation-theory-v2.pdf`](paper/v2/simulation-theory-v2.pdf) | [DOI 10.5281/zenodo.23382841](https://doi.org/10.5281/zenodo.23382841) |
+| v3.0 | [`paper/v3/simulation-theory-v3.pdf`](paper/v3/simulation-theory-v3.pdf) | [DOI 10.5281/zenodo.23424469](https://doi.org/10.5281/zenodo.23424469) |
+
+Plus [`COLLABORATION.md`](COLLABORATION.md) — the honest build log: how the papers were made, what's been debunked, and what's still open. And [`paper/v3/gph-laser-experiment-protocol-DRAFT.md`](paper/v3/gph-laser-experiment-protocol-DRAFT.md) — the executable 2×2×2 laser read-head experiment protocol, with logged independent phenomenology.
 
 ## Where the theory stands (claim ladder)
 

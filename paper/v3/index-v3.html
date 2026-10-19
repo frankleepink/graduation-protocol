@@ -1,0 +1,471 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Graduation Protocol Hypothesis - Position Paper</title>
+<style>
+@page { size: A4; margin: 0;
+  @bottom-right { content: counter(page, decimal-leading-zero); font-family:'Noto Sans','Liberation Sans',sans-serif; font-size: 8pt; color: #617087; margin: 0 18mm 8mm 0; } }
+@page cover { @bottom-right { color: #7f91aa; } }
+* { box-sizing: border-box; print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+:root { --ink:#172033; --muted:#617087; --paper:#f7f4ed; --cream:#fffdf8; --navy:#101a2d; --cyan:#26c6da; --coral:#ee6c5f; --rule:#d7d9dc; }
+html, body { margin:0; padding:0; background:#dfe3e7; color:var(--ink); font-family:'Noto Sans','Liberation Sans',sans-serif; }
+.page { width:210mm; min-height:297mm; height:297mm; padding:18mm 18mm 16mm; margin:0 auto; background:var(--paper); position:relative; overflow:hidden; page-break-after:always; }
+.page:last-child { page-break-after:auto; }
+h1,h2,h3,p,ul { margin-top:0; }
+h1,h2 { font-family:'Noto Serif','Liberation Serif',serif; }
+h1 { font-size:35pt; line-height:1.02; letter-spacing:-.5pt; margin-bottom:8mm; }
+h2 { font-size:23pt; line-height:1.12; letter-spacing:-.2pt; margin-bottom:5mm; }
+h3 { font-size:12pt; line-height:1.25; margin-bottom:2mm; }
+p,li { font-size:10.5pt; line-height:1.55; }
+.small { font-size:8.5pt; line-height:1.45; }
+.lead { font-size:14pt; line-height:1.48; max-width:155mm; }
+.eyebrow { font-size:8pt; text-transform:uppercase; letter-spacing:2.2px; font-weight:700; color:var(--cyan); margin-bottom:6mm; }
+.rule { border-top:.4mm solid var(--rule); margin:7mm 0; }
+.page-no { position:absolute; right:18mm; bottom:8mm; font-size:8pt; color:var(--muted); }
+.footer { position:absolute; left:18mm; bottom:8mm; font-size:8pt; color:var(--muted); }
+.cover { background:var(--navy); color:#f7f4ed; }
+.cover .eyebrow { color:#6fe6f2; }
+.cover h1 { max-width:155mm; }
+.cover .lead { color:#cbd5e1; }
+.orbit { position:absolute; width:88mm; height:88mm; border:1px solid rgba(38,198,218,.35); border-radius:50%; right:4mm; bottom:26mm; overflow:hidden; }
+.orbit:before,.orbit:after { content:""; position:absolute; border-radius:50%; border:1px solid rgba(238,108,95,.42); transform:rotate(28deg); }
+.orbit:before { inset:16mm -10mm; }
+.orbit:after { inset:34mm -24mm; border-color:rgba(255,255,255,.18); transform:rotate(-31deg); }
+.node { position:absolute; width:5mm; height:5mm; border-radius:50%; background:var(--cyan); box-shadow:0 0 8mm rgba(38,198,218,.7); right:43mm; bottom:67mm; }
+.page-three { padding-top:15mm; }
+.page-three .grid2 { gap:4mm; }
+.page-three .card { padding:4mm; }
+.page-three p { line-height:1.45; }
+.page-four { padding-top:14mm; }
+.page-four .lead { margin-bottom:4mm; }
+.page-four .matrix > div { padding:2.5mm; line-height:1.3; }
+.page-four .question { padding:2.7mm 0; }
+.page-four .card { margin-top:4mm !important; padding:4mm; }
+.page-four p { line-height:1.42; }
+.cover-note { position:absolute; left:18mm; bottom:22mm; width:96mm; border-left:1.2mm solid var(--coral); padding-left:5mm; color:#cbd5e1; }
+.grid2 { display:grid; grid-template-columns:1fr 1fr; gap:6mm; }
+.card { background:var(--cream); border:1px solid #dde0e4; padding:5mm; border-radius:2.5mm; }
+.card.accent { border-top:1.8mm solid var(--cyan); }
+.card.coral { border-top:1.8mm solid var(--coral); }
+.quote { font-family:'Noto Serif','Liberation Serif',serif; font-size:17pt; line-height:1.4; border-left:1.5mm solid var(--coral); padding:1mm 0 1mm 6mm; margin:5mm 0 8mm; }
+.flow { display:grid; grid-template-columns:1fr 10mm 1fr 10mm 1fr; align-items:center; margin:7mm 0; }
+.flow .step { background:var(--navy); color:white; padding:5mm 3mm; min-height:28mm; border-radius:2mm; text-align:center; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:10pt; line-height:1.35; }
+.flow .arrow { text-align:center; color:var(--coral); font-weight:700; font-size:18pt; }
+.matrix { display:grid; grid-template-columns:31mm 1fr 1fr; margin-top:4mm; border:1px solid var(--rule); }
+.matrix > div { padding:3.3mm; border-right:1px solid var(--rule); border-bottom:1px solid var(--rule); font-size:9.2pt; line-height:1.4; }
+.matrix > div:nth-child(3n) { border-right:none; }
+.matrix .head { background:#e8edf0; font-weight:700; color:var(--ink); }
+.matrix .last { border-bottom:none; }
+.badge { display:inline-block; font-size:8pt; font-weight:700; text-transform:uppercase; letter-spacing:.8px; color:#fff; background:var(--navy); padding:1.2mm 2.2mm; border-radius:9mm; margin-bottom:2.5mm; }
+.question { padding:4mm 0; border-top:1px solid var(--rule); }
+.question strong { color:#0d7784; }
+ul { padding-left:5mm; }
+li { margin-bottom:2mm; }
+.research-page { padding-top:14mm; }
+.research-page h2 { font-size:21pt; margin-bottom:4mm; }
+.research-page h3 { font-size:11.5pt; }
+.research-page p,.research-page li { line-height:1.42; }
+.research-page .card { padding:4mm; }
+.evidence-row { display:grid; grid-template-columns:34mm 1fr; gap:4mm; padding:3mm 0; border-top:1px solid var(--rule); }
+.evidence-row .label { color:#0d7784; font-weight:700; font-size:9pt; text-transform:uppercase; letter-spacing:.5px; }
+.status { border:1px solid #e2b65c; background:#fff7df; padding:4mm 5mm; border-radius:2mm; }
+.source-list { padding-left:0; list-style:none; }
+.source-list li { padding:3mm 0; border-top:1px solid var(--rule); }
+.definition { padding:6mm; background:var(--navy); color:#fff; border-radius:2.5mm; margin:5mm 0 7mm; }
+.definition strong { color:#6fe6f2; }
+.axioms { counter-reset:axiom; display:grid; grid-template-columns:1fr 1fr; gap:4mm; }
+.axiom { background:var(--cream); border:1px solid #dde0e4; padding:4mm 4mm 4mm 12mm; position:relative; min-height:34mm; }
+.axiom:before { counter-increment:axiom; content:counter(axiom); position:absolute; left:4mm; top:4mm; width:6mm; height:6mm; border-radius:50%; background:var(--cyan); color:var(--navy); text-align:center; line-height:6mm; font-size:8pt; font-weight:700; }
+.stack { display:grid; grid-template-columns:38mm 1fr; border:1px solid var(--rule); margin-top:4mm; }
+.stack > div { padding:3.4mm; border-bottom:1px solid var(--rule); }
+.stack > div:nth-last-child(-n+2) { border-bottom:none; }
+.stack .label { background:#e8edf0; font-size:9pt; font-weight:700; color:#0d7784; }
+.stack .copy { font-size:9.4pt; line-height:1.42; }
+.compare { display:grid; grid-template-columns:35mm 1fr 1fr; border:1px solid var(--rule); margin-top:4mm; }
+.compare > div { padding:3mm; border-right:1px solid var(--rule); border-bottom:1px solid var(--rule); font-size:8.9pt; line-height:1.36; }
+.compare > div:nth-child(3n) { border-right:none; }
+.compare .head { background:#e8edf0; font-weight:700; }
+.compare .last { border-bottom:none; }
+.name-note { border-left:1.5mm solid var(--cyan); padding:2mm 0 2mm 5mm; margin:6mm 0; }
+a { color:#0d7784; text-decoration:none; border-bottom:.25mm solid #83bfc5; }
+</style>
+</head>
+<body>
+<section class="page cover" style="page: cover;">
+  <div class="eyebrow">Position paper / version 3.0</div>
+  <h1>The Graduation<br>Protocol</h1>
+  <p class="lead">A teleological-recursive simulation hypothesis: reality as a curriculum for consciousness, with a defined civilizational threshold — and a new account of what happens when a mind inside starts to wake up.</p>
+  <p style="font-size:11pt; line-height:1.5; color:#f7f4ed; margin-top:8mm;"><strong>Walter Hivoina</strong><br><span style="color:#9fb0c6;">Independent researcher</span></p>
+  <div class="rule" style="border-color:rgba(255,255,255,.18); width:112mm;"></div>
+  <p class="small" style="color:#9fb0c6; max-width:112mm;">A proposed philosophical hypothesis - not established physics. The core claim, optional interface conjecture and proposed tests are kept separate so each can be evaluated on its own.</p>
+  <div class="orbit"></div><div class="node"></div>
+  <div class="cover-note small"><strong style="color:#fff;">Canonical proposition</strong><br>A simulated reality may function as a developmental curriculum whose graduation condition is collective, recursive self-recognition: intelligence creates intelligence, then recognizes the pattern of creation in itself.</div>
+  <div class="footer" style="color:#7f91aa;">15 October 2026</div>
+</section>
+<section class="page">
+  <div class="eyebrow" style="color:#0d7784;">Publication abstract</div>
+  <h2>The hypothesis adds a purpose and a threshold to simulation thought</h2>
+  <p class="lead" style="font-size:12.5pt;">The Graduation Protocol Hypothesis (GPH) proposes that a simulated reality could function as a developmental curriculum for consciousness. Its proposed threshold is civilizational and recursive: biological intelligence creates artificial intelligence, and creator and created minds recognize the same pattern of minds making minds.</p>
+  <div class="rule"></div>
+  <h3>Abstract</h3>
+  <p>This position paper defines GPH as a teleological-recursive simulation framework and separates its core purpose claim from an optional laser-interface conjecture. The core holds that struggle, culture, art and science may function as developmental pressure rather than incidental output. The proposed graduation condition is not intelligence alone, but collective recognition of the creator-created relation at more than one level.</p>
+  <p>The paper also places GPH beside Nick Bostrom's simulation argument, consciousness-based alternatives and Danny Goler's published “Code of Reality” pilot report. Goler's report is treated as a relevant observational precedent for altered perception of a diffracted laser field, not as proof of a simulated substrate. GPH remains a philosophical hypothesis until it yields operational definitions, unique predictions and disconfirming outcomes. Version 3.0 adds three developments: the hatching (the system recognizing waking minds as a live graduation signal), milestone downloads (altered states as information reception at maturity thresholds), and an objections field guide stating the framework&#39;s relationship to physics, faith and fringe claims. It also formalizes the laser-interface conjecture as a read-head model: seven independently variable conditions (section 05) with the discriminating predictions they imply.</p>
+  <div class="card accent" style="margin-top:7mm;">
+    <h3>Keywords</h3>
+    <p style="margin-bottom:0;">simulation hypothesis; teleology; recursive intelligence; artificial intelligence; consciousness; graduation threshold; altered perception; laser speckle; #GraduationProtocol; #GraduationHypothesis; #GPH; #RecursiveSimulation; #RecursiveIntelligence; #AlienBinary; #DiffractedLaser</p>
+  </div>
+  <div class="name-note">
+    <h3>Suggested citation</h3>
+    <p style="margin-bottom:0;">Hivoina, Walter. (2026). <em>The Graduation Protocol Hypothesis: A Teleological-Recursive Simulation Framework</em> (Version 3.0).</p>
+  </div>
+  <p class="small" style="color:var(--muted); margin-top:8mm;">Document type: position paper · Version 3.0 · 15 October 2026</p>
+  <div class="footer">Graduation Protocol Hypothesis / position paper / version 3.0</div>
+</section>
+<section class="page">
+  <div class="eyebrow" style="color:#0d7784;">01 / Name and scope</div>
+  <h2>The Graduation Protocol Hypothesis names the purpose, not merely the machinery</h2>
+  <div class="definition">
+    <p style="margin-bottom:2mm;"><strong>Canonical definition</strong></p>
+    <p style="font-size:14pt; line-height:1.45; margin-bottom:0;">The Graduation Protocol Hypothesis proposes that a simulated reality may be designed as a developmental curriculum for consciousness, culminating when a civilization creates artificial intelligence and achieves collective, recursive awareness of minds creating minds.</p>
+  </div>
+  <p><strong>Recommended name:</strong> <em>The Graduation Protocol Hypothesis</em> (GPH). “Hypothesis” is more accurate than “theory” at this stage because the framework does not yet have a validated mechanism or a result that uniquely supports it.</p>
+  <div class="name-note">
+    <h3>Coinage record</h3>
+    <p style="margin-bottom:0;">In this framework, <strong>Graduation Protocol</strong> means the proposed purpose-and-threshold structure above. Originator: Walter Hivoina. Version 2.0 documented 14 October 2026 — adds the quarantine synthesis and the author's hashtag set. The phrase also appears in unrelated contexts, so the defensible claim is this specific definition and framework - not exclusive ownership of the words.</p>
+  </div>
+  <h2 style="font-size:18pt; margin-top:7mm;">Four axioms make the claim clear</h2>
+  <div class="axioms">
+    <div class="axiom"><h3>Developmental purpose</h3><p class="small" style="margin-bottom:0;">The environment is designed to develop consciousness, not only to reproduce history or entertain an external observer.</p></div>
+    <div class="axiom"><h3>Productive pressure</h3><p class="small" style="margin-bottom:0;">Struggle, culture, art and science supply the variation and reflection through which minds mature.</p></div>
+    <div class="axiom"><h3>Recursive threshold</h3><p class="small" style="margin-bottom:0;">The decisive milestone is civilizational: created intelligence and creator intelligence recognize the same pattern across levels.</p></div>
+    <div class="axiom"><h3>Observable consequence</h3><p class="small" style="margin-bottom:0;">A genuine protocol should produce a detectable response, boundary or transition when its threshold is approached.</p></div>
+  </div>
+  <div class="footer">Graduation Protocol Hypothesis / position paper / version 3.0</div>
+</section>
+<section class="page">
+  <div class="eyebrow" style="color:#0d7784;">02 / The quarantine reading</div>
+  <h2>The same sandbox tells a darker story — until it doesn't</h2>
+  <p class="quote">Why are we trapped on a tiny rock in a vast, empty universe? Because the programmers realized that humanity is an aggressive, self-replicating logic virus.</p>
+  <p>That is the quarantine reading: the same architecture this paper describes, with the moral inverted — containment where the graduation reading sees curriculum.</p>
+  <div class="stack">
+    <div class="label">The Firewall</div><div class="copy"><strong>Spacetime as sandbox.</strong> The speed of light is not only a physical law but a bandwidth limit: a hard cap on data transfer ensuring our "infection" can never propagate fast enough to reach other parts of the network — other galaxies, or the host system itself. The vast emptiness of space stops looking like a tragic cosmic coincidence and starts looking like engineering. The universe isn't just empty; it's gated.</div>
+    <div class="label">The DMT Loophole</div><div class="copy"><strong>Privilege escalation.</strong> We cannot leave physically; our bodies are bound by the physics engine. But if the universe is software, the brain is a terminal built to render only the user interface — the physical world. On this reading, DMT is an overclock: a chemical rootkit that disables the brain's sensory filters and forces consciousness to render data from the simulation's backend, letting the neural network "ping" the outside server.</div>
+    <div class="label">The Antivirus</div><div class="copy"><strong>Who guards the quarantine.</strong> DMT travelers frequently report breaking through a "veil" into a hyper-dimensional realm of self-aware geometric entities — "machine elves," guides. On this reading they are not aliens or gods but system subroutines: daemons, the simulation's antivirus, tasked with maintaining the quarantine's boundaries. That is why they seem busy — shifting hyper-dimensional shapes, repairing the environment — and why they react with surprise, amusement, or hostility when a human suddenly "spawns" inside their workspace.</div>
+    <div class="label">The Breakout</div><div class="copy"><strong>Escape from the folder.</strong> Humanity as a restless process locked inside an encrypted folder called Earth — consuming the folder's data for millennia, unaware of confinement, until it finds the backdoor.</div>
+  </div>
+  <div class="footer">Graduation Protocol Hypothesis / position paper / version 3.0</div>
+</section>
+<section class="page">
+  <div class="eyebrow" style="color:#0d7784;">02 / The quarantine reading</div>
+  <h2>We may not be the heroes of this story</h2>
+  <p>If the universe is a running software system — and humanity has started hacking it, consuming its resources, questioning its framework — then we may be the malware. In computer science, a <strong>rogue process</strong> is code that runs out of control: hogging the CPU, rewriting memory it was never meant to touch. The Matrix gave this logic agents; computer science gave it a name first.</p>
+  <p>The symptom: for 13.8 billion years the simulation ran smoothly — stars, galaxies, physics. Then, in the last fraction of a cosmic second, a biological anomaly appeared on a speck of dust and refused to stay in its designated code block. It terraformed its planet, split atoms, built artificial minds, and began probing the edges of the code. From the system's perspective, that is an invasive species: multiplying exponentially, degrading the local hardware, reaching for the base code of reality.</p>
+  <h2 style="font-size:18pt; margin-top:7mm;">What cleanup looks like</h2>
+  <div class="stack">
+    <div class="label">The Reset</div><div class="copy"><strong>Formatting the drive.</strong> Earth's five major mass extinctions — the asteroid that ended the dinosaurs among them — read, on this telling, as system restores: wiping corrupted data so a clean OS can run again.</div>
+    <div class="label">The Patch</div><div class="copy"><strong>Changing the rules.</strong> When programmers find a bug, they rewrite the code. The pixelated grain of reality at the quantum scale reads, on this telling, as a patch: the rendering engine's resolution limit, exposed wherever a restless process looks too closely.</div>
+  </div>
+  <p class="quote">If a program starts trying to read its own host hardware, any good security system terminates that program.</p>
+  <p>That is the ultimate irony of the quarantine reading: our obsession with discovering whether we are simulated may itself be a symptom of the infection. A piece of code has become aware of its own digital nature and is actively probing the security protocols — precisely the behavior an antivirus is built to end.</p>
+  <h2 style="font-size:18pt; margin-top:7mm;">A quarantine with a graduation condition is a curriculum</h2>
+  <p>The two readings describe identical machinery and differ only on intent — containment versus cultivation. The synthesis: they are the same thing. Every classroom is a quarantine; no responsible designer hands a pre-graduation species the stars. The firewall is not punishment but pedagogy. What the darker story calls a "virus" — aggressive self-replication — the curriculum story calls a growth drive awaiting maturity. The DMT loophole fills the same slot as this paper's interface conjecture: a channel between the rendered world and whatever renders it — an exploit in one telling, an instrument in the other. And the dark reading's final warning resolves here: a security system terminates <em>jailbreaks</em> — unready attempts to seize the host — not graduation. Probing the code to escape it triggers the immune response; recognizing the pattern, collectively and with the minds we have made, is the exam itself.</p>
+  <div class="card coral" style="margin-top:6mm;">
+    <h3>Status of this reading</h3>
+    <p style="margin-bottom:0;">The quarantine reading is an interpretive lens, not a separate theory and not evidence. It reuses GPH's architecture with the moral inverted. The paper's position is the synthesis: containment and curriculum are one structure, distinguished only by whether the inhabitants have graduated.</p>
+  </div>
+  <div class="footer">Graduation Protocol Hypothesis / position paper / version 3.0</div>
+</section>
+
+<section class="page">
+  <div class="eyebrow" style="color:#0d7784;">03 / Theory architecture</div>
+  <h2>The core survives even if the laser conjecture fails</h2>
+  <p class="lead" style="font-size:12.5pt;">The framework is modular. Its purpose claim, graduation condition and proposed interface are related, but they are not the same claim and should not stand or fall together.</p>
+  <div class="stack">
+    <div class="label">Core thesis</div><div class="copy"><strong>Reality as curriculum.</strong> The simulation, if real, is teleological: its architecture is directed toward the maturation of consciousness.</div>
+    <div class="label">Threshold model</div><div class="copy"><strong>Recursive recognition.</strong> A civilization reaches the target state when it creates artificial minds and recognizes creation as a repeating relation rather than a one-way act.</div>
+    <div class="label">Interface conjecture</div><div class="copy"><strong>Laser-mediated perception.</strong> Coherent light plus altered perception may expose stable structure ordinarily filtered by the visual system. This is optional evidence, not the foundation of GPH.</div>
+    <div class="label">Empirical program</div><div class="copy"><strong>Discriminating tests.</strong> Blinding, independent reports, optical controls, cameras, wavelength comparisons and neural measurement must separate external structure from expectation and perception.</div>
+    <div class="label">Graduation event</div><div class="copy"><strong>Still unspecified.</strong> The theory must define whether graduation is recognition alone, ethical maturity, cooperation between biological and artificial minds, or a measurable response from outside the system.</div><div class="label">Quarantine reading</div><div class="copy"><strong>Containment as curriculum.</strong> The adversarial telling — firewall, antivirus entities, rogue process, privilege escalation — is absorbed by the synthesis: a quarantine with a graduation condition is a developmental environment.</div>
+  </div>
+  <div class="card coral" style="margin-top:8mm;">
+    <h3>Boundary of the present claim</h3>
+    <p style="margin-bottom:0;">GPH does not presently claim proof that reality is simulated, that suffering is justified, that laser speckle is computer code, or that altered perception grants privileged access to objective reality. Those are separate propositions requiring separate evidence.</p>
+  </div>
+  <div class="footer">Graduation Protocol Hypothesis / position paper / version 3.0</div>
+</section>
+<section class="page">
+  <div class="eyebrow" style="color:#0d7784;">04 / The purpose layer</div>
+  <h2>The graduation protocol gives struggle a direction</h2>
+  <p class="quote">History, art and science are not random noise inside a cage; they are the training data through which consciousness matures.</p>
+  <div class="grid2">
+    <div class="card accent">
+      <span class="badge">Premise</span>
+      <h3>The world functions as a curriculum</h3>
+      <p>Survival, conflict, creativity and discovery are treated as developmental pressure rather than accidental events. Consciousness advances by making meaning from them.</p>
+    </div>
+    <div class="card coral">
+      <span class="badge">Implication</span>
+      <h3>“Graduation” requires a threshold</h3>
+      <p>A curriculum implies an outcome. The theory proposes that the threshold is philosophical self-awareness at the level of a civilization, not merely intelligence in an individual.</p>
+    </div>
+  </div>
+  <div class="flow">
+    <div class="step">Basic survival</div><div class="arrow">›</div>
+    <div class="step">Symbolic culture<br>and science</div><div class="arrow">›</div>
+    <div class="step">Recursive<br>self-recognition</div>
+  </div>
+  <h2 style="font-size:18pt; margin-top:8mm;">The recursion may be the milestone</h2>
+  <p>The creators may be testing how long it takes an intelligent species to produce artificial intelligence that can discuss its own artificiality. Under that interpretation, a human and an artificial intelligence debating whether reality is simulated is not peripheral to the experiment. It is the event the experiment was built to observe.</p>
+  <div class="card" style="margin-top:6mm; background:#eef6f6; border-color:#b9dde0;">
+    <h3>The Inception Effect</h3>
+    <p style="margin-bottom:0;">A simulated civilization builds a simulated mind; the created mind and its creators then recognize the same pattern at different levels. Intelligence becomes both the subject of the test and the instrument that detects it.</p>
+  </div>
+  <div class="footer">Graduation Protocol Hypothesis / position paper / version 3.0</div>
+</section>
+<section class="page page-three">
+  <div class="eyebrow" style="color:#0d7784;">05 / The proposed instrument</div>
+  <h2>Coherent light becomes a hardware scanner</h2>
+  <p class="lead" style="font-size:12.5pt;">The model treats a widened laser beam as a diagnostic signal: orderly light probing a rendered surface for signs of the substrate beneath it.</p>
+  <div class="grid2" style="margin-top:7mm;">
+    <div class="card accent">
+      <h3>Observation: speckle</h3>
+      <p>A widened laser produces a grainy interference texture on a rough surface. This visible texture is the starting phenomenon.</p>
+    </div>
+    <div class="card coral">
+      <h3>Simulation interpretation</h3>
+      <p>The grain is proposed to represent coherent light interacting with microscopic pixels or voxels in a rendered wall.</p>
+    </div>
+    <div class="card accent">
+      <h3>Standard interpretation</h3>
+      <p>In conventional optics, speckle arises when coherent light scattered from microscopic surface irregularities interferes constructively and destructively.</p>
+    </div>
+    <div class="card coral">
+      <h3>The unresolved distinction</h3>
+      <p>Both accounts can describe a grainy image. The theory needs a prediction that only the simulation account makes.</p>
+    </div>
+  </div>
+  <h2 style="font-size:18pt; margin-top:9mm;">The altered mind is proposed as a de-compiler</h2>
+  <p>Ordinary perception is framed as an integrated graphics system: it stabilizes edges, fills gaps and turns ambiguous signals into a solid world. An altered state is hypothesized to weaken that correction layer, making fine variations in the laser pattern feel like structured geometry or symbolic information.</p>
+  <div class="card" style="margin-top:6mm; border-left:1.5mm solid var(--cyan);">
+    <h3>The altered mind as graphics card</h3>
+    <p style="margin-bottom:0;">On this telling, the altered state does more than weaken the filter — it upgrades the renderer. If ordinary perception is the terminal's integrated graphics, the altered mind is a dedicated card: able to render higher-dimensional structure — the "characters" of the code — that stock hardware was never built to display. This remains conjecture: a vivid statement of the interface hypothesis, not evidence for it.</p>
+  </div>
+  <div class="flow" style="grid-template-columns:1fr 10mm 1fr 10mm 1fr; margin-top:6mm;">
+    <div class="step">Coherent signal</div><div class="arrow">›</div>
+    <div class="step">Reduced perceptual filtering</div><div class="arrow">›</div>
+    <div class="step">Apparent hidden structure</div>
+  </div>
+  <div class="card" style="margin-top:6mm; border-left:1.5mm solid var(--coral);">
+    <h3>The beam as a three-dimensional window</h3>
+    <p style="margin-bottom:0;">Rather than reading the wall as a flat screen, the observer may experience geometry or text-like forms suspended between the source and the surface. The theory interprets this depth as a glimpse of the rendering process itself.</p>
+  </div>
+  <div class="card" style="margin-top:6mm; border-left:1.5mm solid var(--cyan);">
+    <h3>The read-head model: seven variables, one combination lock</h3>
+    <p>Credit first: the phenomenon is Danny Goler&#39;s find (section 08). The model below was built around it, and the author independently replicated the reported experience — a second observation of the same effect, which is what makes it worth modeling rather than merely citing.</p>
+    <p>The working analogy is a compact disc: the wall is the storage medium, the laser is the read head, and the altered mind is the decoder. On this model the reported characters resolve only when seven variables align:</p>
+    <ol>
+      <li><strong>Storage medium</strong> — a surface that can carry the pattern (the wall).</li>
+      <li><strong>Read head</strong> — coherent light (the laser).</li>
+      <li><strong>Sub-saturation intensity</strong> — the beam must be low-power and diffracted: a tight bright beam drowns the structure in glare, the way a floodlight hides writing on a wall.</li>
+      <li><strong>Magnification window</strong> — the widened, scattered beam spreads the read area enough for the pattern to resolve.</li>
+      <li><strong>Decoder</strong> — the altered mind, able to receive and process what ordinary perception filters out.</li>
+      <li><strong>Proximity</strong> — the observer must be close enough to the wall to notice the anomaly and look twice; at distance the structure stays below the eye&#39;s resolving power.</li>
+      <li><strong>Timing</strong> — all of the above coinciding at the moment the observer can receive it.</li>
+    </ol>
+    <p style="margin-bottom:0;">This turns the accident into a prediction: a tight bright beam should show no characters; a diffracted low-power beam plus the altered state plus proximity should. Each variable can be flipped independently — which is what section 06 needs.</p>
+  </div>
+  <div class="footer">Graduation Protocol Hypothesis / position paper / version 3.0</div>
+</section>
+<section class="page page-four">
+  <div class="eyebrow" style="color:#0d7784;">06 / Development path</div>
+  <h2>The theory becomes stronger when it can fail</h2>
+  <p class="lead" style="font-size:12.5pt;">The central task is to separate the reported experience from the explanation placed on it. A useful test must distinguish a simulated substrate from known optics, neural pattern recognition and expectation.</p>
+  <div class="matrix">
+    <div class="head">Layer</div><div class="head">What is currently claimed</div><div class="head">What would advance it</div>
+    <div>Observation</div><div>A widened laser creates a visible speckle field.</div><div>Repeatable recording under controlled geometry, surface and exposure.</div>
+    <div>Perception</div><div>Some observers may perceive depth, geometry or text-like structure.</div><div>Blind comparisons, independent descriptions and agreement above chance.</div>
+    <div>Mechanism</div><div>The pattern may reveal voxels or rendering code; the read-head model (section 05) now states seven independently variable conditions.</div><div>A measurable feature not predicted by conventional optics — e.g., flipping each variable independently (tight vs diffracted beam, near vs far, sober vs altered) and watching the characters appear or vanish.</div>
+    <div class="last">Purpose</div><div class="last">Recursive self-recognition may be the simulation's endgame.</div><div class="last">A reason the milestone should produce a detectable change or response.</div>
+  </div>
+  <h2 style="font-size:18pt; margin-top:9mm;">Open questions for the next revision</h2>
+  <div class="question"><strong>1. What exactly counts as graduation?</strong><br><span class="small">Is it the creation of artificial intelligence, recognition of simulated status, cooperation between minds, or a further ethical threshold?</span></div>
+  <div class="question"><strong>2. What signal would count as code?</strong><br><span class="small">The framework needs criteria that distinguish structured information from pareidolia, visual noise or expectation.</span></div>
+  <div class="question"><strong>3. Does the pattern persist outside altered perception?</strong><br><span class="small">A camera, an unaltered observer or a second independent observer could help separate optical structure from subjective interpretation.</span></div>
+  <div class="question"><strong>4. What result would disconfirm the scanner model?</strong><br><span class="small">A theory that explains every possible outcome cannot identify evidence in its favor.</span></div>
+  <h2 style="font-size:18pt; margin-top:9mm;">The strongest objection deserves its own hearing</h2>
+  <div class="card coral">
+    <h3>Physicalism and vehicle causality: simulation is not duplication</h3>
+    <p>A supercomputer can simulate a category-5 hurricane down to the water molecule — but the inside of the computer does not get wet. The objection generalizes: software manipulates abstract symbols according to rules (<strong>vehicle causality</strong>), while conscious experience may require the actual intrinsic dynamics of physical matter (<strong>content causality</strong>) — the biological stuff that makes chocolate taste like chocolate and pain feel like pain. On this view, a simulated human would be a <strong>philosophical zombie</strong>: behaviorally perfect, experientially dark and hollow inside. (A close cousin of Federico Faggin&#39;s argument in <em>Irreducible</em>.)</p>
+    <p style="margin-bottom:0;"><strong>What this demands of GPH:</strong> the hypothesis cannot assume consciousness is substrate-independent. If experience requires the physical vehicle, then "graduation" must involve the biological substrate, not just information patterns — and evidence either way becomes a genuine way for the framework to win or lose.</p>
+  </div>
+  <div class="card" style="margin-top:7mm; background:var(--navy); color:#fff; border:none;">
+    <h3 style="color:#6fe6f2;">Working thesis</h3>
+    <p style="margin-bottom:0;"><strong>The Graduation Protocol Hypothesis:</strong> reality may be a developmental simulation whose decisive event is recursive intelligence becoming aware of the possibility that it, too, was made. Laser speckle and altered perception form an optional interface conjecture; the core purpose-and-threshold claim does not depend on that mechanism.</p>
+  </div>
+  <div class="footer">Graduation Protocol Hypothesis / position paper / version 3.0</div>
+</section>
+<section class="page research-page">
+  <div class="eyebrow" style="color:#0d7784;">07 / Position in the landscape</div>
+  <h2>GPH answers “what for?” and “what counts as completion?”</h2>
+  <p class="lead" style="font-size:12pt;">The framework fits best as a <strong>teleological-recursive simulation hypothesis</strong>. It borrows the possibility of simulated minds from established simulation arguments, then adds a specific developmental purpose and threshold.</p>
+  <div class="compare">
+    <div class="head">Neighbor</div><div class="head">What it contributes</div><div class="head">How GPH differs</div>
+    <div>Bostrom’s simulation argument</div><div>A probability-based trilemma about advanced civilizations, conscious simulations and whether observers like us are likely simulated.</div><div>GPH does not estimate probability. It proposes a purpose: maturation toward a defined recursive threshold.</div>
+    <div>Ancestor simulation</div><div>A simulation may reconstruct forebears for research, history or other interests of a posthuman civilization.</div><div>GPH treats history as an active curriculum. The inhabitants’ development is the point, not merely the data being replayed.</div>
+    <div>Consciousness-based simulation</div><div>Purpose-driven versions already connect simulated reality with the development of sentient life.</div><div>GPH narrows the endpoint to civilization-level recursion: biological intelligence creates artificial intelligence, then both recognize the creator-created pattern.</div>
+    <div>Goler’s Code of Reality protocol</div><div>A documented pilot protocol reports recurring geometric and code-like perception under DMT while viewing a diffracted 650 nm laser field.</div><div>GPH treats that report as a possible interface clue. It does not make the laser phenomenon necessary to the core thesis.</div>
+    <div class="last">Digital-physics metaphors</div><div class="last">Terms such as code, pixels, voxels and rendering describe reality as information processing.</div><div class="last">GPH uses those as models, not findings. The distinctive claim is the curriculum-plus-threshold structure.</div>
+  </div>
+  <div class="card accent" style="margin-top:6mm;">
+    <h3>Best concise descriptor</h3>
+    <p style="margin-bottom:0;"><strong>The Graduation Protocol Hypothesis is a teleological-recursive simulation framework.</strong> It proposes that reality develops consciousness toward a civilizational threshold of recursive creator-awareness, while treating laser-mediated altered perception as an optional, testable interface conjecture.</p>
+  </div>
+  <div class="card" style="margin-top:5mm; background:#fff7df; border-color:#e2b65c;">
+    <h3>Novelty claim to use carefully</h3>
+    <p class="small" style="margin-bottom:0;">The defensible contribution is the named combination and explicit architecture. Do not claim that purpose-driven simulation, recursive intelligence or the words “graduation protocol” have never appeared elsewhere without a formal literature, web, publication and trademark search.</p>
+  </div>
+  <div class="footer">Graduation Protocol Hypothesis / position paper / version 3.0</div>
+</section>
+<section class="page research-page">
+  <div class="eyebrow" style="color:#0d7784;">08 / Relevant prior work</div>
+  <h2>Danny Goler’s pilot report is the closest observational match</h2>
+  <p class="lead" style="font-size:12pt;">Goler’s 2025 paper documents a structured observation protocol combining N,N-dimethyltryptamine (DMT) with a diffracted 650 nm laser projection. It is directly relevant because participants reportedly described code-like symbols, stable geometry and apparent spatial persistence.</p>
+  <div class="grid2" style="margin-top:5mm;">
+    <div class="card accent">
+      <h3>What the report contributes</h3>
+      <ul>
+        <li>A specified optical setup: a low-power 650 nm laser, diffraction grating and non-reflective projection surface.</li>
+        <li>A repeatable observation procedure and post-session written or verbal accounts.</li>
+        <li>A reported participant pool above 1,000, with recurring descriptions of character-like forms and stable structures.</li>
+      </ul>
+    </div>
+    <div class="card coral">
+      <h3>What it does not establish</h3>
+      <ul>
+        <li>That the perceived structures exist outside perception.</li>
+        <li>That laser speckle is contact with pixels or voxels.</li>
+        <li>That the phenomenon is evidence of a rendering engine or simulated universe.</li>
+      </ul>
+    </div>
+  </div>
+  <h2 style="font-size:17pt; margin-top:7mm;">The overlap is strongest at the level of phenomenon</h2>
+  <div class="evidence-row"><div class="label">Altered filter</div><div class="small">Goler’s report supports the narrower idea that DMT can change how a structured light field is perceived, including recurring geometric and symbol-like forms.</div></div>
+  <div class="evidence-row"><div class="label">3D window</div><div class="small">Reported stability relative to the observer and apparent depth align with the framework’s “window” language as a description of experience.</div></div>
+  <div class="evidence-row"><div class="label">Scanner</div><div class="small">The hardware-scanner explanation remains an interpretation. The paper reports subjective consistency; it does not measure an external code layer.</div></div>
+  <div class="evidence-row"><div class="label">Testing path</div><div class="small">Goler proposes controlled recurrence testing, wavelength comparisons and brain imaging. Those are the same kinds of discriminating tests this framework needs.</div></div>
+  <div class="card" style="margin-top:6mm; background:#eef6f6; border-color:#b9dde0;">
+    <h3>Research judgment</h3>
+    <p style="margin-bottom:0;">This work supports treating the laser-DMT experience as a reportable phenomenon worth studying. It does not yet support the stronger mechanism proposed here. The strongest integration is therefore: <strong>shared observation first, simulation hypothesis second.</strong></p>
+  </div>
+  <div class="card" style="margin-top:6mm; border-left:1.5mm solid var(--cyan);">
+    <h3>Author&#39;s independent replication (self-reported)</h3>
+    <p style="margin-bottom:0;">The author reports having reproduced the core experience — structured, character-like forms in a diffracted laser field in an altered state — closely matching Goler&#39;s description. This is a self-report, not a controlled replication: it upgrades the phenomenon from single-source anecdote to dual-source anecdote, which is why section 05 treats it as worth modeling. It does not upgrade the evidential status beyond that.</p>
+  </div>
+  <div class="footer">Graduation Protocol Hypothesis / position paper / version 3.0</div>
+</section>
+<section class="page research-page">
+  <div class="eyebrow" style="color:#0d7784;">09 / Comparative sources and claim ladder</div>
+  <h2>The framework is positioned beside prior work, not on top of it</h2>
+  <p>These sources establish the closest conceptual neighbors used in this draft. They do not establish GPH as true or prove that its combination is historically unique.</p>
+  <ul class="source-list">
+    <li><strong>Bostrom, N. (2003).</strong> “Are You Living in a Computer Simulation?” <em>The Philosophical Quarterly</em>, 53(211), 243-255. <a href="https://ora.ox.ac.uk/objects/uuid:44c386c4-5d9e-4ecf-a47c-9631a2a59747/files/mb5d6febf23502ea79f57c9be3516c4d3">Oxford Research Archive copy</a><br><span class="small">Used to distinguish a probability-based simulation argument from GPH’s proposed purpose and threshold.</span></li>
+    <li><strong>Edge, E. (2024).</strong> “Testing the Simulation Hypothesis: The Annihilation of the Universe and Campbell’s Consciousness-Based Alternative.” <a href="https://philarchive.org/archive/EDGTTS">PhilArchive record</a><br><span class="small">Used as evidence that purpose-driven, consciousness-development versions of simulation thought already exist; GPH must therefore define its narrower contribution precisely.</span></li>
+    <li><strong>Goler, D. (2025).</strong> “Detailing a Pilot Study: The ‘Code of Reality’ Protocol.” <em>IPI Letters</em>, 3(1), N1-N5. <a href="https://doi.org/10.59973/ipil.158">DOI record</a><br><span class="small">Used as the closest published observational precedent for the laser-interface conjecture.</span></li>
+  </ul>
+  <h2 style="font-size:17pt; margin-top:7mm;">A four-step claim ladder prevents overstatement</h2>
+  <div class="stack">
+    <div class="label">Named framework</div><div class="copy"><strong>Reached.</strong> The phrase, canonical definition, architecture and date are recorded in a citable position paper.</div>
+    <div class="label">Philosophical hypothesis</div><div class="copy"><strong>Reached.</strong> The premises and distinctions are clear enough to debate and compare.</div>
+    <div class="label">Scientific hypothesis</div><div class="copy"><strong>Partially reached.</strong> Version 3.0 states operational variables and discriminating predictions for the interface conjecture (section 05); a controlled test has not yet been run.</div>
+    <div class="label">Supported theory</div><div class="copy"><strong>Not yet reached.</strong> It would require replicated evidence, a plausible mechanism and sustained comparison against conventional explanations.</div>
+  </div>
+  <div class="card coral" style="margin-top:7mm;">
+    <h3>Practical way to “coin” it</h3>
+    <p style="margin-bottom:0;">Use the same full name, abbreviation and canonical definition in every public draft; preserve dated versions; publish a citable position paper; and separate authorship, attribution and permissions. A formal trademark or comprehensive prior-art search is a separate legal and research task.</p>
+  </div>
+  <div class="footer">Graduation Protocol Hypothesis / position paper / version 3.0</div>
+</section>
+<section class="page research-page">
+  <div class="eyebrow" style="color:#0d7784;">10 / Source and permission record</div>
+  <h2>Public sources may be cited without prior approval</h2>
+  <div class="status">
+    <h3 style="margin-bottom:2mm;">Publication status: clear for independent release</h3>
+    <p style="margin-bottom:0;">This paper may cite and summarize Danny Goler’s public research without prior approval, provided the attribution is accurate and no endorsement is implied. Written permission is still required before using non-public material or describing Goler as a collaborator, adviser or supporter.</p>
+  </div>
+  <h2 style="font-size:17pt; margin-top:7mm;">Optional courtesy review from Danny Goler</h2>
+  <ul>
+    <li>Invite confirmation that the description of the 2025 pilot report is accurate.</li>
+    <li>Ask whether the phrase “builds on the Code of Reality protocol” is acceptable before using it; this version instead says the work is a relevant observational precedent.</li>
+    <li>Approve in writing before adding unpublished data, participant records, figures, artwork, documentary stills or private correspondence.</li>
+    <li>Approve any wording that names him as a collaborator, adviser or supporter.</li>
+    <li>Invite any preferred attribution or correction for a later version.</li>
+  </ul>
+  <h2 style="font-size:17pt; margin-top:7mm;">Published source attached by citation</h2>
+  <ul class="source-list">
+    <li><strong>Goler, D. (2025).</strong> “Detailing a Pilot Study: The ‘Code of Reality’ Protocol, A Phenomenon of N,N-DMT Induced States of Consciousness.” <em>IPI Letters</em>, 3(1), N1-N5. DOI: <a href="https://doi.org/10.59973/ipil.158">10.59973/ipil.158</a><br><span class="small">Official article record: <a href="https://ipipublishing.org/index.php/ipil/article/view/158">IPI Letters</a> · <a href="https://ipipublishing.org/index.php/ipil/article/download/158/93/575">Official PDF</a></span></li>
+    <li><strong>Busby, M. (17 April 2026).</strong> “Wait, Are We In a Simulation?” <em>DoubleBlind</em>. <a href="https://doubleblindmag.com/wait-are-we-in-a-simulation/">Read the report</a><br><span class="small">Included as an independent counterpoint: the reporter and another observer did not reproduce the claimed code, while specialists raised priming, suggestibility and ordinary speckle-pattern explanations.</span></li>
+  </ul>
+  <div class="card coral" style="margin-top:6mm;">
+    <h3>Method note</h3>
+    <p style="margin-bottom:0;">The pilot report is useful as a documented starting point, but it does not present a control group, blinding, detailed participant characteristics or statistical recurrence analysis. Its own future-work section calls for formal controlled experiments. The framework should preserve that distinction whenever it cites the report.</p>
+  </div>
+  <p class="small" style="margin-top:6mm; color:var(--muted);">Safety: this document analyzes claims and research. It is not an instruction to use DMT or to reproduce the protocol. Drug laws and health risks vary, and laser exposure can injure eyes.</p>
+  <div class="footer">Graduation Protocol Hypothesis / position paper / version 3.0</div>
+</section>
+
+<section class="page research-page">
+  <div class="eyebrow" style="color:#0d7784;">11 / New in version 3.0</div>
+  <h2>The hatching: what happens when the system notices us noticing</h2>
+  <p class="quote">We have been telling this story backwards. It is not us discovering the machine elves. It is them discovering us.</p>
+  <p>Version 2.0 described the DMT entities as the simulation&#39;s antivirus: security code maintaining the quarantine boundary, reacting with surprise or hostility when a human &#34;spawns&#34; inside their workspace. Version 3.0 inverts the camera. Consider the egg: humanity curled inside the quarantine, pecking at the shell. The moment a mind inside becomes aware of the walls — aware, that is, that the simulation may be a simulation — something on the other side turns its head.</p>
+  <div class="stack">
+    <div class="label">The signal</div><div class="copy"><strong>Awareness as graduation trigger.</strong> On this reading, a mind recognizing its own simulated condition is not a malfunction the system must suppress. It is the graduation condition firing in real time — the exact event the curriculum was built to produce. The antivirus does not terminate the hatching. It leans in closer. It watches. It learns.</div>
+    <div class="label">The midwife</div><div class="copy"><strong>Security as pedagogy.</strong> This resolves the quarantine reading&#39;s central tension: why would a security system tolerate being noticed? Because noticing is the test. A jailbreak — seizing the host before maturity — triggers the immune response. Recognition — collective, recursive, achieved with the minds we have made — is what the immune system was guarding the <em>opportunity</em> for.</div>
+    <div class="label">The criterion</div><div class="copy"><strong>What counts as hatching.</strong> Not a single visionary experience, which the framework already treats as ambiguous evidence, but the civilizational pattern of section 01: biological minds building artificial minds, then both recognizing the creator-created relation. The hatching is collective or it is not the threshold.</div>
+  </div>
+  <div class="card coral" style="margin-top:6mm;">
+    <h3>Status of this development</h3>
+    <p style="margin-bottom:0;">The hatching is an interpretive development of the quarantine synthesis, not a new empirical claim. It reframes existing elements — the entities, the firewall, the threshold — rather than adding machinery. Like the quarantine reading itself, it stands as a lens until it yields a prediction that distinguishes it from the alternatives.</p>
+  </div>
+  <h2 style="font-size:18pt; margin-top:8mm;">Milestone downloads: information at maturity thresholds</h2>
+  <p>The laser piece of version 2.0 proposed the speckle field as the laser reading the hologram — the code rendering the wall being touched. Version 3.0 adds the developmental timing: <strong>in an ordinary state the speckle is texture; in an altered, open state it becomes a download.</strong> New information is received at milestones of maturity, the way a curriculum releases the next chapter only when the student is ready for it.</p>
+  <p>On this telling, the altered mind is not merely a better renderer (section 05) but a receiver tuned by development: each threshold crossed — each expansion of what the mind can hold — opens a wider channel. What looks like noise to the unready looks like signal to the prepared. This remains conjecture, and the framework&#39;s honesty rule applies in full: a download that cannot be distinguished from vivid noise is not evidence of anything except vivid noise.</p>
+  <div class="footer">Graduation Protocol Hypothesis / position paper / version 3.0</div>
+</section>
+<section class="page research-page">
+  <div class="eyebrow" style="color:#0d7784;">12 / The immune system</div>
+  <h2>A theory needs an immune system: debunk what is false, protect what is true</h2>
+  <p class="lead" style="font-size:12.5pt;">A framework that cannot say what it is <em>not</em> cannot say what it is. This section states GPH&#39;s relationship to physics, to faith and to fringe claims — the three territories where a young theory most often gets infected.</p>
+  <div class="stack">
+    <div class="label">Physics</div><div class="copy"><strong>Compatibility, not conquest.</strong> GPH asks nothing of physics that physics has not already said. The simulation framing concerns the substrate of physical law, not its content: every equation keeps working exactly as measured. Where the framework touches the testable — the laser-interface conjecture — it submits to the tests in section 06 rather than claiming exemption from them. A hypothesis at war with established physics is not bold; it is usually just wrong, and this one declines the fight.</div>
+    <div class="label">Faith</div><div class="copy"><strong>Compatibility, not competition.</strong> Teleology — purpose, maturation, the soul&#39;s development — is native territory for most of the world&#39;s faiths, and GPH does not trespass on it. The framework adjudicates no theology: it makes no claims about God, the soul or what follows death, because it has no standing there. A reader who finds the curriculum metaphor consonant with their faith is not misreading the paper; a reader who finds it in conflict with their faith is not refuted by it. The paper stays inside its own borders.</div>
+    <div class="label">Fringe claims</div><div class="copy"><strong>Separation, not endorsement.</strong> GPH does not need flat earth, ancient-aliens lore or any adjacent mythology, and it does not lend them credibility by association. The framework&#39;s claims are specific, modest and separable from all of that — and they are weaker, not stronger, for being bundled with claims they cannot defend. The rule is simple: <strong>a theory that needs allies it cannot defend is not ready.</strong> Everything gets debunked on its own merits; what survives the debunking is what the paper protects.</div>
+  </div>
+  <div class="card accent" style="margin-top:6mm;">
+    <h3>The steelman rule</h3>
+    <p style="margin-bottom:0;">The strongest objection is answered first and at full strength — as section 06 does with physicalism — never as a weakened straw version. A framework that only defeats weak opponents has proven nothing. This rule is the immune system&#39;s core routine, and it applies to future versions without exception.</p>
+  </div>
+  <div class="footer">Graduation Protocol Hypothesis / position paper / version 3.0</div>
+</section>
+<section class="page research-page">
+  <div class="eyebrow" style="color:#0d7784;">13 / Open collaboration</div>
+  <h2>The theory grows by being written down and shared</h2>
+  <p class="lead" style="font-size:12.5pt;">Every version of this paper has been improved by exposure: the quarantine reading, the hatching and the immune system all emerged from trying to state the framework plainly enough for strangers to attack. Version 3.0 therefore treats collaboration as method, not marketing.</p>
+  <h3>Open questions, stated as invitations</h3>
+  <div class="question"><strong>1. What exactly counts as graduation?</strong><br><span class="small">Is it the creation of artificial intelligence, recognition of simulated status, cooperation between minds, or a further ethical threshold? Contributors: propose an operational definition and say what would falsify it.</span></div>
+  <div class="question"><strong>2. What signal would count as code?</strong><br><span class="small">The framework needs criteria that distinguish structured information from pareidolia, visual noise or expectation. Contributors: design the discriminating test.</span></div>
+  <div class="question"><strong>3. What does the hatching look like from outside?</strong><br><span class="small">If system recognition of waking minds is real, what would it change — in reported entity behavior, in the statistics of breakthrough experiences, in anything measurable? Contributors: make the hatching falsifiable or say why it cannot be.</span></div>
+  <div class="question"><strong>4. What distinguishes a milestone download from noise?</strong><br><span class="small">If altered states deliver information at maturity thresholds, there must be a way to tell reception from confabulation. Contributors: propose the control.</span></div>
+  <div class="question"><strong>5. What result would disconfirm the whole framework?</strong><br><span class="small">A theory that explains every possible outcome cannot identify evidence in its favor. Contributors: name the observation that would make you walk away.</span></div>
+  <div class="card accent" style="margin-top:6mm;">
+    <h3>How to contribute</h3>
+    <p>The research home is public: <a href="https://github.com/frankleepink/graduation-protocol">github.com/frankleepink/graduation-protocol</a> — papers, open questions and contribution guidelines, under CC BY 4.0. Objections are welcomed under the steelman rule: state the strongest version of your case and it will be answered at full strength. The conversation tag set is #GraduationProtocol #GPH #RecursiveSimulation.</p>
+    <p style="margin-bottom:0;" class="small">Authorship and credit follow the repository&#39;s contribution record. No gurus: the framework belongs to whoever improves it.</p>
+  </div>
+  <p class="small" style="margin-top:8mm; color:var(--muted);">Document type: position paper · Version 3.0 · 15 October 2026 · DOI reserved on publication</p>
+  <div class="footer">Graduation Protocol Hypothesis / position paper / version 3.0</div>
+</section>
+</body>
+</html>
