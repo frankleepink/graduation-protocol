@@ -3,9 +3,9 @@ site:
   title: Graduation Protocol Docs
   structure:
     - type: space
-      key: space-documentation
+      key: space-1
       title: Documentation
-      path: docs
+      path: documentation
       default: true
       content:
-        directory: /
+        directory: ./documentation
