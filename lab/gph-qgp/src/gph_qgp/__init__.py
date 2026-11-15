@@ -1,4 +1,4 @@
-"""gph_qgp — the GPH Quantum Gravity Phenomenology lab (v0.2.0).
+"""gph_qgp — the GPH Quantum Gravity Phenomenology lab (v0.3.0).
 
 Toy phenomenological models for teaching and exploration, built around
 the Graduation Protocol Hypothesis (GPH) paper, v3.2
@@ -6,12 +6,21 @@ the Graduation Protocol Hypothesis (GPH) paper, v3.2
 
 Modules
 -------
-dispersion : modified dispersion relations and GRB photon time-of-flight
+dispersion : modified dispersion relations (n=1 and n=2) and GRB photon
+             time-of-flight
 foam       : spacetime-foam distance fluctuations and interferometer phase noise
-collapse   : GRW / Diosi-Penrose collapse toy models, with an explicit
-             non-computable oracle boundary (collapse itself is NOT simulated)
-constraints: real published observational limits (GRB time-of-flight,
-             LIGO / Holometer) and checks of the toy models against them
+collapse   : GRW / Diosi-Penrose collapse toy models, CSL phenomenology,
+             with an explicit non-computable oracle boundary (collapse
+             itself is NOT simulated)
+superluminal : superluminal LIV branch — photon decay, photon splitting,
+             vacuum Cherenkov
+birefringence : helicity-dependent photon speed, GRB polarisation rotation
+gup        : generalised uncertainty principle — minimal length, oscillator
+             levels, black-hole temperature
+neutrinos  : energy-dependent neutrino speed, SN1987A / TXS 0506+056 /
+             IceCube time-of-flight
+constraints: real published observational limits and checks of the toy
+             models against them
 pilot      : the GPH sober blinded-pilot analysis pipeline (speckle synthesis,
              rater agreement, invariance checks)
 cli        : command-line runner (``python -m gph_qgp run --experiment ...``,
@@ -24,8 +33,10 @@ A "positive" result inside these simulations only demonstrates that the
 analysis pipeline works as designed.
 """
 
-from . import collapse, constraints, dispersion, foam, pilot
+from . import (birefringence, collapse, constraints, dispersion, foam,
+               gup, neutrinos, pilot, superluminal)
 
-__version__ = "0.2.0"
-__all__ = ["collapse", "constraints", "dispersion", "foam", "pilot",
+__version__ = "0.3.0"
+__all__ = ["birefringence", "collapse", "constraints", "dispersion",
+           "foam", "gup", "neutrinos", "pilot", "superluminal",
            "__version__"]

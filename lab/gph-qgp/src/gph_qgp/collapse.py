@@ -32,6 +32,28 @@ by d, Delta_E = G m^2 (1/R - 1/sqrt(R^2 + d^2)); with no displacement
 given it reduces to the order-of-magnitude estimate G m^2 / R.
 This is an order-of-magnitude estimate, not a measurement.
 
+Continuous Spontaneous Localisation (CSL, v0.3)
+-----------------------------------------------
+CSL (Ghirardi, Pearle & Rimini 1990; Bassi et al.) is the continuous
+version of GRW: a stochastic field couples to the mass density and
+localises macroscopic superpositions at a rate that grows with the
+number of nucleons. For a rigid body the collapse rate is
+
+    Lambda = lambda * N^2              (body smaller than r_C)
+    Lambda = lambda * N^2 / N_cells    (body larger than r_C)
+
+where N is the number of nucleons and N_cells = (size / r_C)^3 is the
+number of correlation volumes in the body — nucleons within one r_C
+localise coherently. CSL also predicts spontaneous heating,
+
+    dE/dt = (3 lambda hbar^2 / (4 m_0 r_C^2)) * N ,
+
+which is what the X-ray bounds (Majorana, XENONnT) constrain, and
+a force noise on test masses, which is what LISA Pathfinder
+constrains. CSL is phenomenology of the aftermath of collapse, like
+GRW — it does not simulate the collapse step itself (see the oracle
+above).
+
 Assumptions and limits (plain language)
 ----------------------------------------
 * Toy 1-D system, SI units (metres, kilograms, seconds, joules).
@@ -54,6 +76,9 @@ HBAR_J_S = 1.054571817e-34   # reduced Planck constant, J s
 G_M3_KG_S2 = 6.67430e-11     # gravitational constant, m^3 kg^-1 s^-2
 GRW_LAMBDA_PER_S = 1.0e-16   # GRW hit rate per particle, 1/s (textbook value)
 GRW_R_C_M = 1.0e-7           # GRW localisation length, m
+CSL_LAMBDA_PER_S = 1.0e-16   # CSL rate, 1/s (standard GRW value)
+CSL_R_C_M = 1.0e-7           # CSL correlation length, m
+NUCLEON_MASS_KG = 1.67492749804e-27  # neutron mass, kg (CSL reference mass)
 
 
 class CollapseNotSimulable(NotImplementedError):
@@ -207,3 +232,47 @@ def dp_collapse_time(mass_kg, radius_m, displacement_m=None):
         if delta_e <= 0:
             return float("inf")
     return float(HBAR_J_S / delta_e)
+
+
+# ---------------------------------------------------------------------- CSL
+def csl_rate(mass_kg, lambda_per_s=CSL_LAMBDA_PER_S, r_c_m=CSL_R_C_M,
+             size_m=None):
+    """CSL collapse rate (1/s) for a rigid body of ``mass_kg``.
+
+    N = mass / m_nucleon nucleons. If the body is smaller than r_C
+    (or ``size_m`` is not given), all nucleons localise coherently
+    and Lambda = lambda * N^2. For a larger body only the nucleons
+    within one correlation volume act coherently, so Lambda =
+    lambda * N^2 / N_cells with N_cells = (size / r_C)^3. This is the
+    textbook rigid-body scaling (Bassi et al.); it is the rate at
+    which a spatial superposition of the body would collapse *after*
+    the collapse step — it does not simulate the step itself.
+    """
+    m = float(mass_kg)
+    if m <= 0:
+        raise ValueError("mass_kg must be > 0")
+    if lambda_per_s < 0 or r_c_m <= 0:
+        raise ValueError("lambda_per_s must be >= 0 and r_c_m > 0")
+    n_nucleons = m / NUCLEON_MASS_KG
+    if size_m is None or float(size_m) <= float(r_c_m):
+        return float(lambda_per_s) * n_nucleons**2
+    n_cells = (float(size_m) / float(r_c_m)) ** 3
+    return float(lambda_per_s) * n_nucleons**2 / n_cells
+
+
+def csl_heating_power(mass_kg, lambda_per_s=CSL_LAMBDA_PER_S,
+                      r_c_m=CSL_R_C_M):
+    """CSL spontaneous heating power (W) for a mass ``mass_kg``.
+
+    dE/dt = (3 lambda hbar^2 / (4 m_0 r_C^2)) * N, with N the number
+    of nucleons. This is the heating the X-ray bounds constrain:
+    spontaneous radiation from the stochastic kicks would show up as
+    excess X-rays, and its absence bounds lambda / r_C^2. See
+    constraints.check_csl_xray.
+    """
+    m = float(mass_kg)
+    if m <= 0:
+        raise ValueError("mass_kg must be > 0")
+    n_nucleons = m / NUCLEON_MASS_KG
+    return float(3.0 * lambda_per_s * HBAR_J_S**2
+                 / (4.0 * NUCLEON_MASS_KG * float(r_c_m)**2)) * n_nucleons
