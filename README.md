@@ -32,14 +32,20 @@ A darker reading of the same architecture — the **quarantine reading** — is 
 
 ## Run the experiments
 
-[`lab/gph-qgp`](lab/gph-qgp) is a runnable Python package (v0.1.0) for exploring the ideas in the paper: modified dispersion relations, spacetime foam, collapse toy models, and the sober blinded pilot analysis pipeline. Install and run one experiment with:
+[`lab/gph-qgp`](lab/gph-qgp) is a runnable Python package (v0.2.0) for exploring the ideas in the paper: modified dispersion relations, spacetime foam, collapse toy models, and the sober blinded pilot analysis pipeline. Install and run one experiment with:
 
 ```
 pip install -e lab/gph-qgp
 python -m gph_qgp run --experiment pilot --out results/
 ```
 
-Toy phenomenological models for teaching and exploration — not real experiments, and not evidence for the hypothesis. A positive result in these sims demonstrates the analysis pipeline, never proof of simulation or curriculum.
+v0.2 adds real published limits and checks the toy models against them:
+
+```
+python -m gph_qgp compare --out results/
+```
+
+Linear dispersion at the Planck scale and random-walk foam are already excluded by GRB and LIGO data; holographic foam is still untested. Toy phenomenological models for teaching and exploration — not real experiments, and not evidence for the hypothesis. A positive result in these sims demonstrates the analysis pipeline, never proof of simulation or curriculum.
 
 Plus [`COLLABORATION.md`](COLLABORATION.md) — the honest build log: how the papers were made, what's been debunked, and what's still open. And [`paper/v3/gph-laser-experiment-protocol-DRAFT.md`](paper/v3/gph-laser-experiment-protocol-DRAFT.md) — the executable 2×2×2 laser read-head experiment protocol, with logged independent phenomenology.
 
