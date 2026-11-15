@@ -1,4 +1,4 @@
-Graduation Protocol Hypothesis / position paper / version 3.2 (DRAFT)
+Graduation Protocol Hypothesis / position paper / version 3.2
 
 The Graduation Protocol
 A teleological-recursive simulation hypothesis: reality as a curriculum for consciousness, with a defined
@@ -8,14 +8,15 @@ Walter Hivoina
 Independent researcher
 A proposed philosophical hypothesis — not established physics. The core claim, optional interface conjecture and
 proposed tests are kept separate so each can be evaluated on its own. Version 3.2 builds on 3.1 by adding a sober,
-blinded pilot protocol for the optional interface conjecture, with a simulation-validated analysis pipeline (v0.1).
-It changes nothing in the core thesis, its criteria, or its disconfirmers. DRAFT — not yet published; no DOI assigned.
+blinded pilot protocol for the optional interface conjecture, with a simulation-validated analysis pipeline (v0.1),
+and a Faizal objection in §07 — non-computable collapse and spacetime emergence as a live disconfirmer.
+It changes nothing in the core thesis, its criteria, or its disconfirmers.
 
 Canonical proposition
 A simulated reality may function as a developmental curriculum whose graduation condition is collective,
 recursive self-recognition: intelligence creates intelligence, then recognizes the pattern of creation in
 itself.
-30 October 2026 · Version 3.2 (DRAFT)
+14 November 2026 · Version 3.2
 
 Publication abstract
 The hypothesis adds a purpose and a threshold to simulation thought
@@ -35,7 +36,9 @@ explicitly downstream of the optional interface and non-evidential for the core;
 disconfirmers for the core thesis itself; and broadens the objection field. Version 3.2 adds a
 sober, blinded pilot protocol for the interface conjecture, with a simulation-validated analysis
 pipeline; no human or camera runs have yet taken place, so the pipeline's validation is not
-evidence about the phenomenon. The paper continues to
+evidence about the phenomenon. Version 3.2 also adds a Faizal objection in §07: non-computable
+collapse and spacetime emergence as a live disconfirmer, carried with Redden's
+provability-versus-execution reply. The paper continues to
 place GPH beside Nick Bostrom's simulation argument, consciousness-based alternatives and
 Danny Goler's published "Code of Reality" pilot report. Goler's report is treated as a relevant
 observational precedent for altered perception of a diffracted laser field, not as proof of a
@@ -46,7 +49,7 @@ consciousness; graduation threshold; altered perception; laser speckle; sober bl
 #GraduationHypothesis; #GPH; #RecursiveSimulation; #RecursiveIntelligence
 
 Suggested citation. Hivoina, Walter. (2026). The Graduation Protocol Hypothesis: A
-Teleological-Recursive Simulation Framework (Version 3.2, DRAFT).
+Teleological-Recursive Simulation Framework (Version 3.2).
 
 01 / Name and scope
 The Graduation Protocol Hypothesis names the purpose, not merely the
@@ -288,7 +291,7 @@ aperture and wavelength. Conventional optics predicts decorrelation across those
 wall-stored component would stay fixed to wall coordinates. An incoherent-light reference image
 of the same location is divided out, and a control wall of a different material is used, because
 fixed reflectance or illumination structure on a real wall can mimic stored correlations.
-Proposed procedure (draft — needs Walter's approval). Observers are sober. Each observer views a set of fields in randomized order, blind to whether a field is W or S, and reports what they see. Reports are coded into categories by raters who are also blind to condition. Proposed coding scheme: none (nothing reported), texture only, geometric structure, character-like forms, other. Proposed scale: 30 wall locations (the simulations detect a strong effect at 30 and miss a weak effect at 10; the final number needs a statistician). Camera recordings for P1 use the same wall locations across viewpoint, aperture and wavelength, registered to the same pixel frame with fiducial markers, with an incoherent-light reference image divided out and a control wall of a different material. Conditions, coding scheme, scale and decision rules are locked before any run. The full procedure is drafted separately as Part A (Sober-pilot-protocol-Part-A-DRAFT.md).
+Procedure. Observers are sober. Each observer views a set of fields in randomized order, blind to whether a field is W or S, and reports what they see. Reports are coded into categories by raters who are also blind to condition. Coding scheme: none (nothing reported), texture only, geometric structure, character-like forms, other. Scale: 30 wall locations (the simulations detect a strong effect at 30 and miss a weak effect at 10; the final number needs a statistician). Camera recordings for P1 use the same wall locations across viewpoint, aperture and wavelength, registered to the same pixel frame with fiducial markers, with an incoherent-light reference image divided out and a control wall of a different material. Conditions, coding scheme, scale and decision rules are locked before any run. The full procedure is set out separately in the sober pilot protocol, Part A.
 Analysis scripts (v0.1). speckle_synth.py generates the synthetic speckle for condition S,
 either with chosen grain size and contrast or matched to a real recording of the wall.
 agreement_analysis.py computes report rates, chance-corrected agreement (Krippendorff's
@@ -325,7 +328,7 @@ optics — flipping each variable independently and watching the characters appe
 Purpose (core): recursive self-recognition may be the simulation’s endgame. Advance: clearer
 operational criteria (already begun in §05) and potential external signatures.
 Sober pilot: what is ready and what is not
-The sober pilot is the most advanced part of the interface program: the protocol design is drafted (proposed, awaiting approval) and the analysis pipeline (v0.1) is specified and simulation-tested, but no empirical runs exist. It
+The sober pilot is the most advanced part of the interface program: the protocol design is stated and the analysis pipeline (v0.1) is specified and simulation-tested, but no empirical runs exist. It
 advances the interface layer from "repeatable recording under controlled geometry" to a blinded
 test with a stated null (W = S) and a stated discriminator (P1 invariance). It does not change
 the core thesis, its criteria, or its disconfirmers, and a null result here would kill only the
@@ -529,7 +532,7 @@ welcomed under the steelman rule. The conversation tag set is #GraduationProtoco
 #RecursiveSimulation.
 Authorship and credit follow the repository’s contribution record. No gurus: the framework
 belongs to whoever improves it.
-Document type: position paper · Version 3.2 (DRAFT) · 30 October 2026 · Not yet published; no DOI assigned.
+Document type: position paper · Version 3.2 · 14 November 2026
 Safety note: this document analyzes claims and research. It is not an instruction to use DMT or to reproduce any protocol. Drug
 laws and health risks vary, and laser exposure can injure eyes. The sober pilot in §06 uses no psychoactive substances by design; laser safety still applies — use only low-power, eye-safe illumination and never direct a beam at eyes.
 
