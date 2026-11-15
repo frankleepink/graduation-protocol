@@ -28,7 +28,18 @@ A darker reading of the same architecture — the **quarantine reading** — is 
 | v2.0 | [`paper/v2/simulation-theory-v2.pdf`](paper/v2/simulation-theory-v2.pdf) | [DOI 10.5281/zenodo.23382841](https://doi.org/10.5281/zenodo.23382841) |
 | v3.0 | [`paper/v3/simulation-theory-v3.pdf`](paper/v3/simulation-theory-v3.pdf) | [DOI 10.5281/zenodo.23424469](https://doi.org/10.5281/zenodo.23424469) |
 | v3.1 | [`paper/v3.1/Graduation-Protocol-Hypothesis-v3.1.pdf`](paper/v3.1/Graduation-Protocol-Hypothesis-v3.1.pdf) | [DOI 10.5281/zenodo.23464415](https://doi.org/10.5281/zenodo.23464415) |
-| v3.2 | [`paper/v3.2/Graduation-Protocol-Hypothesis-v3.2.md`](paper/v3.2/Graduation-Protocol-Hypothesis-v3.2.md) | Approved 14 November 2026; Zenodo DOI pending |
+| v3.2 | [`paper/v3.2/Graduation-Protocol-Hypothesis-v3.2-DRAFT.md`](paper/v3.2/Graduation-Protocol-Hypothesis-v3.2-DRAFT.md) | Approved 14 November 2026; Zenodo DOI pending |
+
+## Run the experiments
+
+[`lab/gph-qgp`](lab/gph-qgp) is a runnable Python package (v0.1.0) for exploring the ideas in the paper: modified dispersion relations, spacetime foam, collapse toy models, and the sober blinded pilot analysis pipeline. Install and run one experiment with:
+
+```
+pip install -e lab/gph-qgp
+python -m gph_qgp run --experiment pilot --out results/
+```
+
+Toy phenomenological models for teaching and exploration — not real experiments, and not evidence for the hypothesis. A positive result in these sims demonstrates the analysis pipeline, never proof of simulation or curriculum.
 
 Plus [`COLLABORATION.md`](COLLABORATION.md) — the honest build log: how the papers were made, what's been debunked, and what's still open. And [`paper/v3/gph-laser-experiment-protocol-DRAFT.md`](paper/v3/gph-laser-experiment-protocol-DRAFT.md) — the executable 2×2×2 laser read-head experiment protocol, with logged independent phenomenology.
 
