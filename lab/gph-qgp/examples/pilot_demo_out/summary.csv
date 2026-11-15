@@ -1,0 +1,4 @@
+condition,units,responses,report_rate,mean_pairwise_agreement,alpha_nominal,alpha_ci95_lo,alpha_ci95_hi
+R,30,360,0.6917,0.2237,0.0125,-0.0126,0.0331
+S,30,360,0.7111,0.2136,0.0046,-0.0174,0.0217
+W,30,360,0.7111,0.3081,0.1248,0.0734,0.1687

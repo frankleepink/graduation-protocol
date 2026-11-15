@@ -1,0 +1,64 @@
+{
+  "rows": 1080,
+  "categories": [
+    "character-like forms",
+    "geometric structure",
+    "none",
+    "other",
+    "texture only"
+  ],
+  "per_condition": {
+    "R": {
+      "units": 30,
+      "responses": 360,
+      "report_rate": 0.6916666666666667,
+      "mean_pairwise_agreement": 0.2237373737373737,
+      "alpha_nominal": 0.012460066756749488,
+      "alpha_ci95": [
+        -0.012552448979420311,
+        0.033139220279878374
+      ]
+    },
+    "S": {
+      "units": 30,
+      "responses": 360,
+      "report_rate": 0.7111111111111111,
+      "mean_pairwise_agreement": 0.21363636363636365,
+      "alpha_nominal": 0.004606891639212907,
+      "alpha_ci95": [
+        -0.01743331999201476,
+        0.021743012297707733
+      ]
+    },
+    "W": {
+      "units": 30,
+      "responses": 360,
+      "report_rate": 0.7111111111111111,
+      "mean_pairwise_agreement": 0.308080808080808,
+      "alpha_nominal": 0.12475642200610404,
+      "alpha_ci95": [
+        0.07336708126486012,
+        0.16874462314153324
+      ]
+    }
+  },
+  "comparison": {
+    "a": "W",
+    "b": "S",
+    "alpha_diff_a_minus_b": 0.12014953036689113,
+    "perm_p_two_sided": 0.000999000999000999,
+    "n_perm": 1000
+  },
+  "invariance_demo": {
+    "stored": {
+      "pairs": 6,
+      "mean_best_r_changed": 0.4819333333333333,
+      "mean_z_changed": 11.786666666666667
+    },
+    "conventional": {
+      "pairs": 6,
+      "mean_best_r_changed": 0.08876666666666666,
+      "mean_z_changed": 0.4116666666666666
+    }
+  }
+}

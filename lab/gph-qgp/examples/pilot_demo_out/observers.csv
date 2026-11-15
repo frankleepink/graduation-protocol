@@ -1,0 +1,1081 @@
+observer_id,location_id,condition,response
+o00,L00,W,character-like forms
+o01,L00,W,none
+o02,L00,W,other
+o03,L00,W,texture only
+o04,L00,W,other
+o05,L00,W,none
+o06,L00,W,none
+o07,L00,W,character-like forms
+o08,L00,W,character-like forms
+o09,L00,W,geometric structure
+o10,L00,W,none
+o11,L00,W,other
+o00,L01,W,none
+o01,L01,W,texture only
+o02,L01,W,geometric structure
+o03,L01,W,texture only
+o04,L01,W,none
+o05,L01,W,none
+o06,L01,W,texture only
+o07,L01,W,texture only
+o08,L01,W,texture only
+o09,L01,W,none
+o10,L01,W,character-like forms
+o11,L01,W,texture only
+o00,L02,W,none
+o01,L02,W,character-like forms
+o02,L02,W,other
+o03,L02,W,none
+o04,L02,W,character-like forms
+o05,L02,W,none
+o06,L02,W,character-like forms
+o07,L02,W,geometric structure
+o08,L02,W,character-like forms
+o09,L02,W,none
+o10,L02,W,character-like forms
+o11,L02,W,character-like forms
+o00,L03,W,none
+o01,L03,W,geometric structure
+o02,L03,W,other
+o03,L03,W,none
+o04,L03,W,character-like forms
+o05,L03,W,geometric structure
+o06,L03,W,none
+o07,L03,W,other
+o08,L03,W,none
+o09,L03,W,character-like forms
+o10,L03,W,geometric structure
+o11,L03,W,none
+o00,L04,W,none
+o01,L04,W,character-like forms
+o02,L04,W,character-like forms
+o03,L04,W,character-like forms
+o04,L04,W,character-like forms
+o05,L04,W,none
+o06,L04,W,character-like forms
+o07,L04,W,geometric structure
+o08,L04,W,geometric structure
+o09,L04,W,character-like forms
+o10,L04,W,other
+o11,L04,W,character-like forms
+o00,L05,W,character-like forms
+o01,L05,W,texture only
+o02,L05,W,none
+o03,L05,W,other
+o04,L05,W,texture only
+o05,L05,W,none
+o06,L05,W,texture only
+o07,L05,W,character-like forms
+o08,L05,W,texture only
+o09,L05,W,none
+o10,L05,W,texture only
+o11,L05,W,other
+o00,L06,W,character-like forms
+o01,L06,W,character-like forms
+o02,L06,W,texture only
+o03,L06,W,texture only
+o04,L06,W,character-like forms
+o05,L06,W,geometric structure
+o06,L06,W,character-like forms
+o07,L06,W,character-like forms
+o08,L06,W,none
+o09,L06,W,none
+o10,L06,W,none
+o11,L06,W,character-like forms
+o00,L07,W,texture only
+o01,L07,W,geometric structure
+o02,L07,W,texture only
+o03,L07,W,geometric structure
+o04,L07,W,none
+o05,L07,W,none
+o06,L07,W,character-like forms
+o07,L07,W,texture only
+o08,L07,W,other
+o09,L07,W,other
+o10,L07,W,none
+o11,L07,W,none
+o00,L08,W,none
+o01,L08,W,none
+o02,L08,W,none
+o03,L08,W,none
+o04,L08,W,other
+o05,L08,W,other
+o06,L08,W,other
+o07,L08,W,other
+o08,L08,W,character-like forms
+o09,L08,W,other
+o10,L08,W,other
+o11,L08,W,other
+o00,L09,W,none
+o01,L09,W,other
+o02,L09,W,none
+o03,L09,W,geometric structure
+o04,L09,W,geometric structure
+o05,L09,W,none
+o06,L09,W,geometric structure
+o07,L09,W,texture only
+o08,L09,W,other
+o09,L09,W,other
+o10,L09,W,other
+o11,L09,W,other
+o00,L10,W,none
+o01,L10,W,none
+o02,L10,W,geometric structure
+o03,L10,W,other
+o04,L10,W,geometric structure
+o05,L10,W,character-like forms
+o06,L10,W,geometric structure
+o07,L10,W,texture only
+o08,L10,W,geometric structure
+o09,L10,W,geometric structure
+o10,L10,W,none
+o11,L10,W,geometric structure
+o00,L11,W,texture only
+o01,L11,W,none
+o02,L11,W,none
+o03,L11,W,character-like forms
+o04,L11,W,none
+o05,L11,W,none
+o06,L11,W,none
+o07,L11,W,character-like forms
+o08,L11,W,geometric structure
+o09,L11,W,none
+o10,L11,W,character-like forms
+o11,L11,W,geometric structure
+o00,L12,W,character-like forms
+o01,L12,W,texture only
+o02,L12,W,none
+o03,L12,W,other
+o04,L12,W,none
+o05,L12,W,none
+o06,L12,W,character-like forms
+o07,L12,W,none
+o08,L12,W,none
+o09,L12,W,other
+o10,L12,W,character-like forms
+o11,L12,W,other
+o00,L13,W,character-like forms
+o01,L13,W,geometric structure
+o02,L13,W,character-like forms
+o03,L13,W,character-like forms
+o04,L13,W,none
+o05,L13,W,texture only
+o06,L13,W,geometric structure
+o07,L13,W,geometric structure
+o08,L13,W,character-like forms
+o09,L13,W,other
+o10,L13,W,none
+o11,L13,W,geometric structure
+o00,L14,W,none
+o01,L14,W,none
+o02,L14,W,other
+o03,L14,W,none
+o04,L14,W,other
+o05,L14,W,other
+o06,L14,W,other
+o07,L14,W,other
+o08,L14,W,other
+o09,L14,W,other
+o10,L14,W,other
+o11,L14,W,none
+o00,L15,W,other
+o01,L15,W,none
+o02,L15,W,other
+o03,L15,W,none
+o04,L15,W,none
+o05,L15,W,other
+o06,L15,W,none
+o07,L15,W,other
+o08,L15,W,none
+o09,L15,W,other
+o10,L15,W,other
+o11,L15,W,geometric structure
+o00,L16,W,texture only
+o01,L16,W,none
+o02,L16,W,none
+o03,L16,W,none
+o04,L16,W,other
+o05,L16,W,none
+o06,L16,W,character-like forms
+o07,L16,W,character-like forms
+o08,L16,W,character-like forms
+o09,L16,W,other
+o10,L16,W,none
+o11,L16,W,texture only
+o00,L17,W,other
+o01,L17,W,character-like forms
+o02,L17,W,texture only
+o03,L17,W,none
+o04,L17,W,texture only
+o05,L17,W,character-like forms
+o06,L17,W,character-like forms
+o07,L17,W,texture only
+o08,L17,W,texture only
+o09,L17,W,texture only
+o10,L17,W,other
+o11,L17,W,texture only
+o00,L18,W,texture only
+o01,L18,W,other
+o02,L18,W,none
+o03,L18,W,texture only
+o04,L18,W,character-like forms
+o05,L18,W,character-like forms
+o06,L18,W,texture only
+o07,L18,W,other
+o08,L18,W,texture only
+o09,L18,W,character-like forms
+o10,L18,W,texture only
+o11,L18,W,none
+o00,L19,W,character-like forms
+o01,L19,W,none
+o02,L19,W,character-like forms
+o03,L19,W,other
+o04,L19,W,character-like forms
+o05,L19,W,texture only
+o06,L19,W,other
+o07,L19,W,geometric structure
+o08,L19,W,character-like forms
+o09,L19,W,geometric structure
+o10,L19,W,character-like forms
+o11,L19,W,character-like forms
+o00,L20,W,geometric structure
+o01,L20,W,geometric structure
+o02,L20,W,other
+o03,L20,W,other
+o04,L20,W,character-like forms
+o05,L20,W,geometric structure
+o06,L20,W,none
+o07,L20,W,none
+o08,L20,W,character-like forms
+o09,L20,W,geometric structure
+o10,L20,W,geometric structure
+o11,L20,W,geometric structure
+o00,L21,W,geometric structure
+o01,L21,W,geometric structure
+o02,L21,W,geometric structure
+o03,L21,W,geometric structure
+o04,L21,W,geometric structure
+o05,L21,W,geometric structure
+o06,L21,W,geometric structure
+o07,L21,W,geometric structure
+o08,L21,W,texture only
+o09,L21,W,geometric structure
+o10,L21,W,geometric structure
+o11,L21,W,none
+o00,L22,W,geometric structure
+o01,L22,W,geometric structure
+o02,L22,W,geometric structure
+o03,L22,W,other
+o04,L22,W,none
+o05,L22,W,geometric structure
+o06,L22,W,geometric structure
+o07,L22,W,none
+o08,L22,W,character-like forms
+o09,L22,W,geometric structure
+o10,L22,W,none
+o11,L22,W,geometric structure
+o00,L23,W,character-like forms
+o01,L23,W,character-like forms
+o02,L23,W,geometric structure
+o03,L23,W,geometric structure
+o04,L23,W,none
+o05,L23,W,geometric structure
+o06,L23,W,none
+o07,L23,W,none
+o08,L23,W,none
+o09,L23,W,geometric structure
+o10,L23,W,none
+o11,L23,W,none
+o00,L24,W,texture only
+o01,L24,W,texture only
+o02,L24,W,none
+o03,L24,W,texture only
+o04,L24,W,texture only
+o05,L24,W,character-like forms
+o06,L24,W,texture only
+o07,L24,W,texture only
+o08,L24,W,geometric structure
+o09,L24,W,none
+o10,L24,W,other
+o11,L24,W,none
+o00,L25,W,none
+o01,L25,W,geometric structure
+o02,L25,W,other
+o03,L25,W,character-like forms
+o04,L25,W,other
+o05,L25,W,geometric structure
+o06,L25,W,geometric structure
+o07,L25,W,other
+o08,L25,W,geometric structure
+o09,L25,W,none
+o10,L25,W,none
+o11,L25,W,geometric structure
+o00,L26,W,other
+o01,L26,W,geometric structure
+o02,L26,W,other
+o03,L26,W,other
+o04,L26,W,none
+o05,L26,W,other
+o06,L26,W,none
+o07,L26,W,none
+o08,L26,W,other
+o09,L26,W,other
+o10,L26,W,other
+o11,L26,W,other
+o00,L27,W,character-like forms
+o01,L27,W,none
+o02,L27,W,character-like forms
+o03,L27,W,geometric structure
+o04,L27,W,character-like forms
+o05,L27,W,geometric structure
+o06,L27,W,character-like forms
+o07,L27,W,texture only
+o08,L27,W,none
+o09,L27,W,geometric structure
+o10,L27,W,none
+o11,L27,W,character-like forms
+o00,L28,W,other
+o01,L28,W,none
+o02,L28,W,other
+o03,L28,W,none
+o04,L28,W,none
+o05,L28,W,none
+o06,L28,W,none
+o07,L28,W,other
+o08,L28,W,geometric structure
+o09,L28,W,none
+o10,L28,W,character-like forms
+o11,L28,W,none
+o00,L29,W,texture only
+o01,L29,W,texture only
+o02,L29,W,other
+o03,L29,W,none
+o04,L29,W,texture only
+o05,L29,W,texture only
+o06,L29,W,none
+o07,L29,W,texture only
+o08,L29,W,other
+o09,L29,W,texture only
+o10,L29,W,texture only
+o11,L29,W,none
+o00,L00,R,character-like forms
+o01,L00,R,character-like forms
+o02,L00,R,character-like forms
+o03,L00,R,character-like forms
+o04,L00,R,other
+o05,L00,R,other
+o06,L00,R,none
+o07,L00,R,character-like forms
+o08,L00,R,texture only
+o09,L00,R,texture only
+o10,L00,R,character-like forms
+o11,L00,R,texture only
+o00,L01,R,character-like forms
+o01,L01,R,none
+o02,L01,R,character-like forms
+o03,L01,R,character-like forms
+o04,L01,R,texture only
+o05,L01,R,texture only
+o06,L01,R,character-like forms
+o07,L01,R,none
+o08,L01,R,none
+o09,L01,R,texture only
+o10,L01,R,character-like forms
+o11,L01,R,texture only
+o00,L02,R,texture only
+o01,L02,R,other
+o02,L02,R,none
+o03,L02,R,texture only
+o04,L02,R,character-like forms
+o05,L02,R,character-like forms
+o06,L02,R,none
+o07,L02,R,character-like forms
+o08,L02,R,other
+o09,L02,R,none
+o10,L02,R,geometric structure
+o11,L02,R,geometric structure
+o00,L03,R,texture only
+o01,L03,R,none
+o02,L03,R,character-like forms
+o03,L03,R,character-like forms
+o04,L03,R,none
+o05,L03,R,none
+o06,L03,R,none
+o07,L03,R,none
+o08,L03,R,none
+o09,L03,R,none
+o10,L03,R,texture only
+o11,L03,R,geometric structure
+o00,L04,R,none
+o01,L04,R,geometric structure
+o02,L04,R,other
+o03,L04,R,geometric structure
+o04,L04,R,other
+o05,L04,R,geometric structure
+o06,L04,R,geometric structure
+o07,L04,R,geometric structure
+o08,L04,R,none
+o09,L04,R,none
+o10,L04,R,geometric structure
+o11,L04,R,character-like forms
+o00,L05,R,texture only
+o01,L05,R,other
+o02,L05,R,texture only
+o03,L05,R,texture only
+o04,L05,R,texture only
+o05,L05,R,none
+o06,L05,R,none
+o07,L05,R,texture only
+o08,L05,R,none
+o09,L05,R,other
+o10,L05,R,other
+o11,L05,R,texture only
+o00,L06,R,geometric structure
+o01,L06,R,other
+o02,L06,R,character-like forms
+o03,L06,R,none
+o04,L06,R,geometric structure
+o05,L06,R,geometric structure
+o06,L06,R,texture only
+o07,L06,R,none
+o08,L06,R,other
+o09,L06,R,geometric structure
+o10,L06,R,other
+o11,L06,R,character-like forms
+o00,L07,R,texture only
+o01,L07,R,other
+o02,L07,R,texture only
+o03,L07,R,geometric structure
+o04,L07,R,none
+o05,L07,R,none
+o06,L07,R,texture only
+o07,L07,R,character-like forms
+o08,L07,R,character-like forms
+o09,L07,R,none
+o10,L07,R,none
+o11,L07,R,texture only
+o00,L08,R,other
+o01,L08,R,geometric structure
+o02,L08,R,none
+o03,L08,R,none
+o04,L08,R,character-like forms
+o05,L08,R,geometric structure
+o06,L08,R,geometric structure
+o07,L08,R,none
+o08,L08,R,other
+o09,L08,R,none
+o10,L08,R,character-like forms
+o11,L08,R,other
+o00,L09,R,none
+o01,L09,R,texture only
+o02,L09,R,texture only
+o03,L09,R,none
+o04,L09,R,none
+o05,L09,R,none
+o06,L09,R,character-like forms
+o07,L09,R,geometric structure
+o08,L09,R,geometric structure
+o09,L09,R,none
+o10,L09,R,other
+o11,L09,R,geometric structure
+o00,L10,R,character-like forms
+o01,L10,R,none
+o02,L10,R,none
+o03,L10,R,geometric structure
+o04,L10,R,none
+o05,L10,R,none
+o06,L10,R,character-like forms
+o07,L10,R,none
+o08,L10,R,texture only
+o09,L10,R,other
+o10,L10,R,texture only
+o11,L10,R,none
+o00,L11,R,texture only
+o01,L11,R,texture only
+o02,L11,R,none
+o03,L11,R,character-like forms
+o04,L11,R,none
+o05,L11,R,none
+o06,L11,R,none
+o07,L11,R,none
+o08,L11,R,texture only
+o09,L11,R,none
+o10,L11,R,texture only
+o11,L11,R,character-like forms
+o00,L12,R,none
+o01,L12,R,character-like forms
+o02,L12,R,character-like forms
+o03,L12,R,texture only
+o04,L12,R,none
+o05,L12,R,texture only
+o06,L12,R,character-like forms
+o07,L12,R,other
+o08,L12,R,texture only
+o09,L12,R,texture only
+o10,L12,R,none
+o11,L12,R,none
+o00,L13,R,character-like forms
+o01,L13,R,geometric structure
+o02,L13,R,none
+o03,L13,R,none
+o04,L13,R,geometric structure
+o05,L13,R,other
+o06,L13,R,texture only
+o07,L13,R,other
+o08,L13,R,geometric structure
+o09,L13,R,none
+o10,L13,R,other
+o11,L13,R,texture only
+o00,L14,R,character-like forms
+o01,L14,R,other
+o02,L14,R,none
+o03,L14,R,geometric structure
+o04,L14,R,texture only
+o05,L14,R,none
+o06,L14,R,texture only
+o07,L14,R,character-like forms
+o08,L14,R,texture only
+o09,L14,R,character-like forms
+o10,L14,R,geometric structure
+o11,L14,R,texture only
+o00,L15,R,none
+o01,L15,R,character-like forms
+o02,L15,R,other
+o03,L15,R,other
+o04,L15,R,none
+o05,L15,R,character-like forms
+o06,L15,R,none
+o07,L15,R,other
+o08,L15,R,texture only
+o09,L15,R,geometric structure
+o10,L15,R,none
+o11,L15,R,character-like forms
+o00,L16,R,none
+o01,L16,R,none
+o02,L16,R,none
+o03,L16,R,character-like forms
+o04,L16,R,other
+o05,L16,R,none
+o06,L16,R,character-like forms
+o07,L16,R,none
+o08,L16,R,texture only
+o09,L16,R,other
+o10,L16,R,character-like forms
+o11,L16,R,none
+o00,L17,R,character-like forms
+o01,L17,R,geometric structure
+o02,L17,R,character-like forms
+o03,L17,R,character-like forms
+o04,L17,R,none
+o05,L17,R,character-like forms
+o06,L17,R,character-like forms
+o07,L17,R,other
+o08,L17,R,none
+o09,L17,R,texture only
+o10,L17,R,none
+o11,L17,R,texture only
+o00,L18,R,texture only
+o01,L18,R,other
+o02,L18,R,none
+o03,L18,R,geometric structure
+o04,L18,R,texture only
+o05,L18,R,texture only
+o06,L18,R,character-like forms
+o07,L18,R,none
+o08,L18,R,other
+o09,L18,R,none
+o10,L18,R,none
+o11,L18,R,geometric structure
+o00,L19,R,none
+o01,L19,R,none
+o02,L19,R,none
+o03,L19,R,none
+o04,L19,R,none
+o05,L19,R,other
+o06,L19,R,texture only
+o07,L19,R,none
+o08,L19,R,geometric structure
+o09,L19,R,none
+o10,L19,R,other
+o11,L19,R,geometric structure
+o00,L20,R,texture only
+o01,L20,R,character-like forms
+o02,L20,R,other
+o03,L20,R,geometric structure
+o04,L20,R,other
+o05,L20,R,none
+o06,L20,R,none
+o07,L20,R,geometric structure
+o08,L20,R,texture only
+o09,L20,R,character-like forms
+o10,L20,R,none
+o11,L20,R,none
+o00,L21,R,none
+o01,L21,R,character-like forms
+o02,L21,R,character-like forms
+o03,L21,R,none
+o04,L21,R,character-like forms
+o05,L21,R,other
+o06,L21,R,none
+o07,L21,R,texture only
+o08,L21,R,character-like forms
+o09,L21,R,geometric structure
+o10,L21,R,geometric structure
+o11,L21,R,none
+o00,L22,R,character-like forms
+o01,L22,R,other
+o02,L22,R,geometric structure
+o03,L22,R,other
+o04,L22,R,geometric structure
+o05,L22,R,character-like forms
+o06,L22,R,texture only
+o07,L22,R,other
+o08,L22,R,character-like forms
+o09,L22,R,texture only
+o10,L22,R,none
+o11,L22,R,geometric structure
+o00,L23,R,geometric structure
+o01,L23,R,character-like forms
+o02,L23,R,other
+o03,L23,R,none
+o04,L23,R,geometric structure
+o05,L23,R,none
+o06,L23,R,character-like forms
+o07,L23,R,none
+o08,L23,R,other
+o09,L23,R,texture only
+o10,L23,R,other
+o11,L23,R,character-like forms
+o00,L24,R,other
+o01,L24,R,geometric structure
+o02,L24,R,texture only
+o03,L24,R,geometric structure
+o04,L24,R,texture only
+o05,L24,R,geometric structure
+o06,L24,R,geometric structure
+o07,L24,R,none
+o08,L24,R,other
+o09,L24,R,none
+o10,L24,R,texture only
+o11,L24,R,texture only
+o00,L25,R,texture only
+o01,L25,R,geometric structure
+o02,L25,R,texture only
+o03,L25,R,none
+o04,L25,R,other
+o05,L25,R,texture only
+o06,L25,R,geometric structure
+o07,L25,R,none
+o08,L25,R,geometric structure
+o09,L25,R,character-like forms
+o10,L25,R,texture only
+o11,L25,R,none
+o00,L26,R,other
+o01,L26,R,none
+o02,L26,R,texture only
+o03,L26,R,geometric structure
+o04,L26,R,character-like forms
+o05,L26,R,none
+o06,L26,R,none
+o07,L26,R,other
+o08,L26,R,other
+o09,L26,R,other
+o10,L26,R,other
+o11,L26,R,none
+o00,L27,R,texture only
+o01,L27,R,other
+o02,L27,R,none
+o03,L27,R,character-like forms
+o04,L27,R,character-like forms
+o05,L27,R,character-like forms
+o06,L27,R,character-like forms
+o07,L27,R,geometric structure
+o08,L27,R,other
+o09,L27,R,other
+o10,L27,R,character-like forms
+o11,L27,R,other
+o00,L28,R,none
+o01,L28,R,none
+o02,L28,R,other
+o03,L28,R,none
+o04,L28,R,texture only
+o05,L28,R,character-like forms
+o06,L28,R,none
+o07,L28,R,geometric structure
+o08,L28,R,texture only
+o09,L28,R,geometric structure
+o10,L28,R,none
+o11,L28,R,geometric structure
+o00,L29,R,none
+o01,L29,R,geometric structure
+o02,L29,R,none
+o03,L29,R,texture only
+o04,L29,R,character-like forms
+o05,L29,R,texture only
+o06,L29,R,texture only
+o07,L29,R,other
+o08,L29,R,none
+o09,L29,R,other
+o10,L29,R,texture only
+o11,L29,R,none
+o00,L00,S,character-like forms
+o01,L00,S,geometric structure
+o02,L00,S,none
+o03,L00,S,none
+o04,L00,S,none
+o05,L00,S,texture only
+o06,L00,S,geometric structure
+o07,L00,S,other
+o08,L00,S,none
+o09,L00,S,none
+o10,L00,S,other
+o11,L00,S,geometric structure
+o00,L01,S,none
+o01,L01,S,character-like forms
+o02,L01,S,other
+o03,L01,S,character-like forms
+o04,L01,S,other
+o05,L01,S,other
+o06,L01,S,texture only
+o07,L01,S,none
+o08,L01,S,other
+o09,L01,S,other
+o10,L01,S,other
+o11,L01,S,none
+o00,L02,S,other
+o01,L02,S,other
+o02,L02,S,other
+o03,L02,S,texture only
+o04,L02,S,none
+o05,L02,S,none
+o06,L02,S,texture only
+o07,L02,S,character-like forms
+o08,L02,S,texture only
+o09,L02,S,none
+o10,L02,S,texture only
+o11,L02,S,none
+o00,L03,S,character-like forms
+o01,L03,S,other
+o02,L03,S,none
+o03,L03,S,none
+o04,L03,S,character-like forms
+o05,L03,S,none
+o06,L03,S,character-like forms
+o07,L03,S,texture only
+o08,L03,S,none
+o09,L03,S,geometric structure
+o10,L03,S,character-like forms
+o11,L03,S,geometric structure
+o00,L04,S,other
+o01,L04,S,texture only
+o02,L04,S,geometric structure
+o03,L04,S,texture only
+o04,L04,S,none
+o05,L04,S,geometric structure
+o06,L04,S,character-like forms
+o07,L04,S,geometric structure
+o08,L04,S,character-like forms
+o09,L04,S,geometric structure
+o10,L04,S,geometric structure
+o11,L04,S,texture only
+o00,L05,S,none
+o01,L05,S,none
+o02,L05,S,none
+o03,L05,S,character-like forms
+o04,L05,S,geometric structure
+o05,L05,S,texture only
+o06,L05,S,geometric structure
+o07,L05,S,other
+o08,L05,S,geometric structure
+o09,L05,S,character-like forms
+o10,L05,S,character-like forms
+o11,L05,S,none
+o00,L06,S,other
+o01,L06,S,texture only
+o02,L06,S,character-like forms
+o03,L06,S,other
+o04,L06,S,none
+o05,L06,S,character-like forms
+o06,L06,S,character-like forms
+o07,L06,S,none
+o08,L06,S,texture only
+o09,L06,S,geometric structure
+o10,L06,S,character-like forms
+o11,L06,S,character-like forms
+o00,L07,S,other
+o01,L07,S,character-like forms
+o02,L07,S,geometric structure
+o03,L07,S,texture only
+o04,L07,S,texture only
+o05,L07,S,character-like forms
+o06,L07,S,none
+o07,L07,S,character-like forms
+o08,L07,S,character-like forms
+o09,L07,S,texture only
+o10,L07,S,texture only
+o11,L07,S,none
+o00,L08,S,character-like forms
+o01,L08,S,geometric structure
+o02,L08,S,geometric structure
+o03,L08,S,texture only
+o04,L08,S,character-like forms
+o05,L08,S,texture only
+o06,L08,S,character-like forms
+o07,L08,S,texture only
+o08,L08,S,geometric structure
+o09,L08,S,none
+o10,L08,S,other
+o11,L08,S,texture only
+o00,L09,S,texture only
+o01,L09,S,character-like forms
+o02,L09,S,none
+o03,L09,S,geometric structure
+o04,L09,S,none
+o05,L09,S,geometric structure
+o06,L09,S,texture only
+o07,L09,S,texture only
+o08,L09,S,texture only
+o09,L09,S,none
+o10,L09,S,geometric structure
+o11,L09,S,other
+o00,L10,S,none
+o01,L10,S,other
+o02,L10,S,geometric structure
+o03,L10,S,geometric structure
+o04,L10,S,other
+o05,L10,S,none
+o06,L10,S,texture only
+o07,L10,S,texture only
+o08,L10,S,character-like forms
+o09,L10,S,other
+o10,L10,S,character-like forms
+o11,L10,S,none
+o00,L11,S,geometric structure
+o01,L11,S,other
+o02,L11,S,geometric structure
+o03,L11,S,none
+o04,L11,S,geometric structure
+o05,L11,S,geometric structure
+o06,L11,S,none
+o07,L11,S,geometric structure
+o08,L11,S,character-like forms
+o09,L11,S,none
+o10,L11,S,character-like forms
+o11,L11,S,none
+o00,L12,S,none
+o01,L12,S,character-like forms
+o02,L12,S,texture only
+o03,L12,S,texture only
+o04,L12,S,other
+o05,L12,S,character-like forms
+o06,L12,S,texture only
+o07,L12,S,texture only
+o08,L12,S,character-like forms
+o09,L12,S,character-like forms
+o10,L12,S,geometric structure
+o11,L12,S,character-like forms
+o00,L13,S,other
+o01,L13,S,texture only
+o02,L13,S,other
+o03,L13,S,geometric structure
+o04,L13,S,geometric structure
+o05,L13,S,character-like forms
+o06,L13,S,none
+o07,L13,S,character-like forms
+o08,L13,S,texture only
+o09,L13,S,other
+o10,L13,S,texture only
+o11,L13,S,character-like forms
+o00,L14,S,character-like forms
+o01,L14,S,geometric structure
+o02,L14,S,character-like forms
+o03,L14,S,texture only
+o04,L14,S,geometric structure
+o05,L14,S,other
+o06,L14,S,none
+o07,L14,S,geometric structure
+o08,L14,S,texture only
+o09,L14,S,character-like forms
+o10,L14,S,character-like forms
+o11,L14,S,none
+o00,L15,S,none
+o01,L15,S,texture only
+o02,L15,S,texture only
+o03,L15,S,other
+o04,L15,S,texture only
+o05,L15,S,none
+o06,L15,S,character-like forms
+o07,L15,S,none
+o08,L15,S,none
+o09,L15,S,other
+o10,L15,S,none
+o11,L15,S,none
+o00,L16,S,geometric structure
+o01,L16,S,none
+o02,L16,S,geometric structure
+o03,L16,S,none
+o04,L16,S,character-like forms
+o05,L16,S,geometric structure
+o06,L16,S,texture only
+o07,L16,S,character-like forms
+o08,L16,S,geometric structure
+o09,L16,S,texture only
+o10,L16,S,none
+o11,L16,S,none
+o00,L17,S,none
+o01,L17,S,texture only
+o02,L17,S,character-like forms
+o03,L17,S,other
+o04,L17,S,other
+o05,L17,S,geometric structure
+o06,L17,S,none
+o07,L17,S,texture only
+o08,L17,S,none
+o09,L17,S,none
+o10,L17,S,other
+o11,L17,S,character-like forms
+o00,L18,S,other
+o01,L18,S,none
+o02,L18,S,texture only
+o03,L18,S,none
+o04,L18,S,other
+o05,L18,S,other
+o06,L18,S,none
+o07,L18,S,none
+o08,L18,S,texture only
+o09,L18,S,other
+o10,L18,S,other
+o11,L18,S,geometric structure
+o00,L19,S,other
+o01,L19,S,none
+o02,L19,S,none
+o03,L19,S,none
+o04,L19,S,other
+o05,L19,S,character-like forms
+o06,L19,S,none
+o07,L19,S,texture only
+o08,L19,S,other
+o09,L19,S,none
+o10,L19,S,texture only
+o11,L19,S,character-like forms
+o00,L20,S,none
+o01,L20,S,geometric structure
+o02,L20,S,texture only
+o03,L20,S,character-like forms
+o04,L20,S,none
+o05,L20,S,none
+o06,L20,S,none
+o07,L20,S,none
+o08,L20,S,none
+o09,L20,S,character-like forms
+o10,L20,S,geometric structure
+o11,L20,S,geometric structure
+o00,L21,S,none
+o01,L21,S,texture only
+o02,L21,S,character-like forms
+o03,L21,S,none
+o04,L21,S,other
+o05,L21,S,texture only
+o06,L21,S,character-like forms
+o07,L21,S,none
+o08,L21,S,geometric structure
+o09,L21,S,none
+o10,L21,S,texture only
+o11,L21,S,other
+o00,L22,S,other
+o01,L22,S,texture only
+o02,L22,S,none
+o03,L22,S,geometric structure
+o04,L22,S,character-like forms
+o05,L22,S,other
+o06,L22,S,none
+o07,L22,S,none
+o08,L22,S,character-like forms
+o09,L22,S,geometric structure
+o10,L22,S,texture only
+o11,L22,S,other
+o00,L23,S,none
+o01,L23,S,character-like forms
+o02,L23,S,none
+o03,L23,S,geometric structure
+o04,L23,S,none
+o05,L23,S,geometric structure
+o06,L23,S,character-like forms
+o07,L23,S,none
+o08,L23,S,none
+o09,L23,S,character-like forms
+o10,L23,S,texture only
+o11,L23,S,character-like forms
+o00,L24,S,texture only
+o01,L24,S,character-like forms
+o02,L24,S,none
+o03,L24,S,none
+o04,L24,S,character-like forms
+o05,L24,S,character-like forms
+o06,L24,S,texture only
+o07,L24,S,texture only
+o08,L24,S,geometric structure
+o09,L24,S,character-like forms
+o10,L24,S,geometric structure
+o11,L24,S,character-like forms
+o00,L25,S,other
+o01,L25,S,character-like forms
+o02,L25,S,geometric structure
+o03,L25,S,other
+o04,L25,S,geometric structure
+o05,L25,S,character-like forms
+o06,L25,S,none
+o07,L25,S,geometric structure
+o08,L25,S,none
+o09,L25,S,none
+o10,L25,S,geometric structure
+o11,L25,S,none
+o00,L26,S,character-like forms
+o01,L26,S,geometric structure
+o02,L26,S,texture only
+o03,L26,S,character-like forms
+o04,L26,S,none
+o05,L26,S,none
+o06,L26,S,texture only
+o07,L26,S,none
+o08,L26,S,other
+o09,L26,S,geometric structure
+o10,L26,S,other
+o11,L26,S,none
+o00,L27,S,geometric structure
+o01,L27,S,character-like forms
+o02,L27,S,none
+o03,L27,S,character-like forms
+o04,L27,S,none
+o05,L27,S,character-like forms
+o06,L27,S,geometric structure
+o07,L27,S,none
+o08,L27,S,none
+o09,L27,S,character-like forms
+o10,L27,S,character-like forms
+o11,L27,S,none
+o00,L28,S,geometric structure
+o01,L28,S,none
+o02,L28,S,texture only
+o03,L28,S,none
+o04,L28,S,character-like forms
+o05,L28,S,none
+o06,L28,S,geometric structure
+o07,L28,S,other
+o08,L28,S,texture only
+o09,L28,S,character-like forms
+o10,L28,S,texture only
+o11,L28,S,geometric structure
+o00,L29,S,texture only
+o01,L29,S,none
+o02,L29,S,texture only
+o03,L29,S,geometric structure
+o04,L29,S,geometric structure
+o05,L29,S,texture only
+o06,L29,S,none
+o07,L29,S,none
+o08,L29,S,texture only
+o09,L29,S,none
+o10,L29,S,none
+o11,L29,S,texture only
