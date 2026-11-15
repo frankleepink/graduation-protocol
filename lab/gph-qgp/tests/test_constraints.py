@@ -1,4 +1,4 @@
-"""Tests for the v0.2 real-limits constraints module and compare CLI."""
+"""Tests for the v0.3 real-limits constraints module and compare CLI."""
 
 import os
 import subprocess
@@ -55,12 +55,15 @@ def test_dispersion_eta_zero_survives():
     assert res["verdict"] == "SURVIVES"
 
 
-def test_dispersion_quadratic_unconstrained():
-    """The linear toy model has no quadratic term; say so, don't fake it."""
+def test_dispersion_quadratic_planck_scale_survives():
+    """v0.3: the quadratic model is real now. eta = 1 at the Planck
+    scale survives — the best quadratic limit (1.2e12 GeV) is four
+    orders below E_Pl. (v0.2 returned UNCONSTRAINED here because the
+    model had no quadratic term; that is no longer true.)"""
     res = constraints.check_dispersion(eta=1.0, order=2)
-    assert res["verdict"] == "UNCONSTRAINED"
+    assert res["verdict"] == "SURVIVES"
     assert len(res["per_constraint"]) == 3
-    assert all(p["verdict"] == "UNCONSTRAINED" for p in res["per_constraint"])
+    assert all(p["verdict"] == "SURVIVES" for p in res["per_constraint"])
 
 
 def test_dispersion_superluminal_unconstrained():
