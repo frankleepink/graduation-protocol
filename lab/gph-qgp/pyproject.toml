@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "gph-qgp"
-version = "0.1.0"
+version = "0.2.0"
 description = "GPH Quantum Gravity Phenomenology lab: toy modified-mechanics experiments for teaching and exploration"
 readme = "README.md"
 license = { text = "CC-BY-4.0" }

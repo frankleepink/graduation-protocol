@@ -22,7 +22,7 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import numpy as np
 
-from . import collapse, dispersion, foam, pilot
+from . import collapse, constraints, dispersion, foam, pilot
 
 
 def _write_csv(path, fieldnames, rows):
@@ -202,6 +202,174 @@ EXPERIMENTS = {
 }
 
 
+def run_compare(out_dir):
+    """Compare the package's toy models with the real published limits.
+
+    Evaluates the linear dispersion model (eta = 1 at the Planck scale)
+    against the GRB time-of-flight limits, and both foam scalings
+    against the LIGO O1 noise floor (plus the 40-m parameter bounds and
+    the Holometer result). Writes comparison.csv and comparison.png,
+    and prints a plain-language verdict per model.
+    """
+    rows = []
+    verdicts = {}
+
+    # --- dispersion: linear toy model, eta = 1 at the Planck scale ---
+    disp = constraints.check_dispersion(eta=1.0, order=1)
+    verdicts["dispersion_linear_eta1"] = disp["verdict"]
+    for p in disp["per_constraint"]:
+        rows.append({
+            "check": "dispersion_linear",
+            "model": "linear MDR, eta=1, E_QG=E_Pl",
+            "predicted": f"{disp['effective_scale_gev']:.6g}",
+            "predicted_units": "GeV",
+            "limit": f"{p['limit_gev']:.6g}",
+            "limit_units": "GeV (lower limit)",
+            "ratio": f"{disp['effective_scale_gev'] / p['limit_gev']:.6g}",
+            "verdict": p["verdict"],
+            "source": p["source"],
+        })
+    disp2 = constraints.check_dispersion(eta=1.0, order=2)
+    verdicts["dispersion_quadratic"] = disp2["verdict"]
+    for p in disp2["per_constraint"]:
+        rows.append({
+            "check": "dispersion_quadratic",
+            "model": "linear MDR, eta=1 (no quadratic term)",
+            "predicted": "n/a",
+            "predicted_units": "GeV",
+            "limit": f"{p['limit_gev']:.6g}",
+            "limit_units": "GeV (lower limit)",
+            "ratio": "n/a",
+            "verdict": p["verdict"],
+            "source": p["source"],
+        })
+
+    # --- foam: both scalings vs the LIGO O1 floor ---
+    for model in foam.MODELS:
+        res = constraints.check_foam(model)
+        verdicts[f"foam_{model}"] = res["verdict"]
+        if model == "random_walk":
+            rows.append({
+                "check": "foam_ligo_psd",
+                "model": "random-walk foam, 4 km arm, 100 Hz",
+                "predicted": f"{res['predicted_asd_m_per_rt_hz']:.6g}",
+                "predicted_units": "m/sqrt(Hz)",
+                "limit": f"{res['ligo_floor_m_per_rt_hz']:.6g}",
+                "limit_units": "m/sqrt(Hz) (LIGO O1 floor)",
+                "ratio": f"{res['ratio']:.6g}",
+                "verdict": res["verdict"],
+                "source": "Abbott et al., PRL 116, 131103 (2016)",
+            })
+        else:
+            rows.append({
+                "check": "foam_ligo_rms",
+                "model": "holographic foam, 4 km arm",
+                "predicted": f"{res['predicted_rms_m']:.6g}",
+                "predicted_units": "m (RMS)",
+                "limit": f"{res['ligo_floor_1hz_band_m']:.6g}",
+                "limit_units": "m (LIGO floor, 1 Hz band)",
+                "ratio": f"{res['ratio']:.6g}",
+                "verdict": res["verdict"],
+                "source": "Abbott et al., PRL 116, 131103 (2016)",
+            })
+        res40 = constraints.check_foam_40m(model)
+        verdicts[f"foam_40m_{model}"] = res40["verdict"]
+        rows.append({
+            "check": "foam_40m_parameter_bound",
+            "model": f"{model} foam, l_QG = l_P",
+            "predicted": f"{res40['model_length_scale_m']:.6g}",
+            "predicted_units": "m",
+            "limit": f"{res40['bound_m']:.6g}",
+            "limit_units": "m (upper bound on l_QG)",
+            "ratio": f"{res40['ratio']:.6g}",
+            "verdict": res40["verdict"],
+            "source": "Ng & van Dam, arXiv:gr-qc/9906003",
+        })
+
+    # --- Holometer: Hogan's shear-symmetry variant ---
+    holo = constraints.check_holometer()
+    verdicts["holometer_hogan_shear"] = holo["verdict"]
+    rows.append({
+        "check": "holometer_shear",
+        "model": "Hogan shear-symmetry holographic noise",
+        "predicted": "1.0",
+        "predicted_units": "fraction of Planck-scale prediction",
+        "limit": "0.1",
+        "limit_units": "fraction probed (2 sigma)",
+        "ratio": "10",
+        "verdict": holo["verdict"],
+        "source": holo["source"],
+    })
+
+    _write_csv(os.path.join(out_dir, "comparison.csv"),
+               ["check", "model", "predicted", "predicted_units", "limit",
+                "limit_units", "ratio", "verdict", "source"], rows)
+
+    # --- plot: two panels, model predictions vs exclusion limits ---
+    fig, axes = plt.subplots(1, 2, figsize=(11, 4.5))
+    # Panel 1: linear LIV, E_QG in units of E_Pl (log scale).
+    lin = [p for p in disp["per_constraint"]]
+    labels = ["Abdo\n2009", "Vasileiou\n2013", "LHAASO\n2024", "Yang\n2024"]
+    limits_epl = [p["limit_e_pl"] for p in lin]
+    axes[0].bar(labels, limits_epl, color="#c0392b", alpha=0.75,
+                label="published lower limit")
+    axes[0].axhline(disp["effective_scale_e_pl"], color="k", ls="--",
+                    label="toy model: eta=1 at E_Pl")
+    axes[0].set_yscale("log")
+    axes[0].set_ylabel("E_QG,1 (Planck energies)")
+    axes[0].set_title("Linear LIV: model vs GRB limits\n(below a bar = excluded)")
+    axes[0].legend(fontsize=8)
+    # Panel 2: foam RMS fluctuation at 4 km vs LIGO floor (1 Hz band).
+    rw_rms = float(foam.fluctuation(4000.0, model="random_walk"))
+    ho_rms = float(foam.fluctuation(4000.0, model="holographic"))
+    floor = constraints.ligo_displacement_floor()
+    axes[1].bar(["random-walk\nRMS", "holographic\nRMS"], [rw_rms, ho_rms],
+                color=["#c0392b", "#2e86c1"], alpha=0.75)
+    axes[1].axhline(floor, color="k", ls="--",
+                    label="LIGO O1 floor, 1 Hz band")
+    axes[1].set_yscale("log")
+    axes[1].set_ylabel("distance fluctuation (m)")
+    axes[1].set_title("Foam at 4 km vs LIGO floor\n(above the line = would have been seen)")
+    axes[1].legend(fontsize=8)
+    fig.tight_layout()
+    fig.savefig(os.path.join(out_dir, "comparison.png"), dpi=120)
+    plt.close(fig)
+
+    rw_asd = constraints.random_walk_psd_asd(100.0)
+    ligo_floor = constraints.ligo_displacement_floor()
+    print(
+        f"Comparison against real published limits (v0.2):\n"
+        f"  Linear dispersion, eta = 1 at the Planck scale: "
+        f"{disp['verdict']} — effective E_QG,1 = "
+        f"{disp['effective_scale_e_pl']:.2f} E_Pl, below every published "
+        f"limit (1.2, 7.6, 10 and 12.3 E_Pl). The Planck-scale linear "
+        f"model is dead; a linear effect would need E_QG,1 > 12.3 E_Pl.\n"
+        f"  Quadratic dispersion: {disp2['verdict']} — the toy model has "
+        f"no quadratic term, so the quadratic GRB limits (best "
+        f"1.2e12 GeV) do not test it.\n"
+        f"  Random-walk foam at 4 km: "
+        f"{verdicts['foam_random_walk']} — predicted noise "
+        f"{rw_asd:.3g} m/sqrt(Hz) at "
+        f"100 Hz vs LIGO's floor "
+        f"{ligo_floor:.3g} m/sqrt(Hz), a "
+        f"factor of ~{rw_asd / ligo_floor:.0f}. "
+        f"LIGO would have seen it.\n"
+        f"  Holographic foam at 4 km: "
+        f"{verdicts['foam_holographic']} — RMS fluctuation "
+        f"{ho_rms:.3g} m, ~{ligo_floor / ho_rms:.0f}x below LIGO's floor "
+        f"in a 1 Hz band. "
+        f"Below sensitivity, not tested.\n"
+        f"  Hogan shear-symmetry holographic noise: "
+        f"{holo['verdict']} by the Fermilab Holometer (final data probe "
+        f"~10x below the Planck-scale prediction). That is Hogan's "
+        f"specific model, not the generic holographic scaling and not "
+        f"the holographic principle.\n"
+        f"  40-m parameter bounds: both foam models SURVIVE — a "
+        f"Planck-scale length parameter passes the Ng & van Dam bounds."
+    )
+    return verdicts
+
+
 def main(argv=None):
     parser = argparse.ArgumentParser(
         prog="gph-qgp",
@@ -212,9 +380,15 @@ def main(argv=None):
     run.add_argument("--experiment", choices=sorted(EXPERIMENTS), required=True)
     run.add_argument("--out", required=True, help="output directory")
     run.add_argument("--seed", type=int, default=0)
+    compare = sub.add_parser("compare", help="compare toy models with real "
+                             "published limits")
+    compare.add_argument("--out", required=True, help="output directory")
     args = parser.parse_args(argv)
     os.makedirs(args.out, exist_ok=True)
-    EXPERIMENTS[args.experiment](args.out, seed=args.seed)
+    if args.cmd == "compare":
+        run_compare(args.out)
+    else:
+        EXPERIMENTS[args.experiment](args.out, seed=args.seed)
     return 0
 
 
