@@ -50,6 +50,27 @@ python -m gph_qgp run --experiment neutrinos --out results/
 python -m gph_qgp compare --out results/
 ```
 
+## Try it with no install
+
+- **Web lab (no install):** the interactive browser version runs the same mechanics live — dispersion, photon decay, GUP, CSL, neutrinos, birefringence — with sliders, real-event presets (GRB 090510, LHAASO 1.4 PeV, IceCube-170922A, the Crab) and SURVIVES / EXCLUDED verdicts.
+- **Colab notebook (no install):** [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/frankleepink/graduation-protocol/blob/main/lab/gph-qgp/examples/gph-qgp-colab.ipynb) — `examples/gph-qgp-colab.ipynb` installs the lab from GitHub and runs dispersion, the real-limits comparison, and the pilot pipeline.
+- **Install from PyPI (coming):** `pip install gph-qgp` — package builds clean and passes `twine check`; publishing needs a PyPI account + API token (see below).
+
+## What running it looks like
+
+`python -m gph_qgp compare` (v0.3, 117 tests pass) checks the toy models against real published limits. Sample output is in `sample-outputs/comparison.csv`:
+
+- Linear dispersion, η = 1 at E_Pl — **EXCLUDED** (GRB time-of-flight: E_QG,1 > 12.3 E_Pl)
+- Quadratic dispersion — **SURVIVES** (best limit 1.2e12 GeV, four orders below E_Pl)
+- Random-walk foam at 4 km — **EXCLUDED** (LIGO would have seen it, factor ~2770)
+- Holographic foam — **UNCONSTRAINED** (below LIGO sensitivity)
+- Superluminal photons n=1 — **EXCLUDED**; n=2 — **SURVIVES**
+- Superluminal electrons — **EXCLUDED**; birefringence η = 1 — **EXCLUDED**
+- GUP β₀ = 1 — **SURVIVES**; CSL textbook GRW values — **EXCLUDED** (by the XENONnT preprint bound only)
+- Diósi–Penrose parameter-free — **EXCLUDED**; neutrinos subluminal — **SURVIVE**, superluminal n=1 — **EXCLUDED**
+
+Toy models only, simulated data only — never evidence for the hypothesis. A positive result in these sims demonstrates the analysis pipeline, never proof of simulation or curriculum.
+
 ## Real limits (v0.3) — where the models already die
 
 `python -m gph_qgp compare` checks the package's own toy models

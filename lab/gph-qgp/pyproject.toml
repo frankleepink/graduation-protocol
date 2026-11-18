@@ -7,7 +7,7 @@ name = "gph-qgp"
 version = "0.3.0"
 description = "GPH Quantum Gravity Phenomenology lab: toy modified-mechanics experiments for teaching and exploration"
 readme = "README.md"
-license = { text = "CC-BY-4.0" }
+license = "CC-BY-4.0"
 requires-python = ">=3.10"
 authors = [
     { name = "Walter Hivoina", email = "whivoina@gmail.com" },
