@@ -80,3 +80,7 @@ Open questions live in [OPEN_QUESTIONS.md](OPEN_QUESTIONS.md).
 ## Citation
 
 Hivoina, W. (2026). *The Graduation Protocol Hypothesis.* Zenodo. https://doi.org/10.5281/zenodo.23380886 (v1) · https://doi.org/10.5281/zenodo.23382841 (v2)
+
+## Support the work
+
+The paper, the lab and the web lab are free and open (CC BY 4.0). If you use them and want to support the work: [github.com/sponsors/frankleepink](https://github.com/sponsors/frankleepink) — and try the lab free first: [web lab](https://muse.ai/s/gph-quantum-gravity-lab-kxu6xpvxxxttxqxyy/tYgmGxOgGYnIjlKh2Tk5kzJowrIa07dTTiOkSPGiLms) · `pip install gph-qgp`

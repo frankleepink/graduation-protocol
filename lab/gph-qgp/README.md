@@ -170,3 +170,7 @@ being silently papered over with a random-number draw.
 
 CC BY 4.0 — see `LICENSE`. Give credit to Walter Hivoina when you
 share or adapt this work.
+
+## Support
+
+Free and open — if the lab is useful to you, you can support the work at [github.com/sponsors/frankleepink](https://github.com/sponsors/frankleepink). Try it free first: [web lab](https://muse.ai/s/gph-quantum-gravity-lab-kxu6xpvxxxttxqxyy/tYgmGxOgGYnIjlKh2Tk5kzJowrIa07dTTiOkSPGiLms).
