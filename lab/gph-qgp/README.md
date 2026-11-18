@@ -54,7 +54,7 @@ python -m gph_qgp compare --out results/
 
 - **Web lab (no install):** the interactive browser version runs the same mechanics live — dispersion, photon decay, GUP, CSL, neutrinos, birefringence — with sliders, real-event presets (GRB 090510, LHAASO 1.4 PeV, IceCube-170922A, the Crab) and SURVIVES / EXCLUDED verdicts.
 - **Colab notebook (no install):** [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/frankleepink/graduation-protocol/blob/main/lab/gph-qgp/examples/gph-qgp-colab.ipynb) — `examples/gph-qgp-colab.ipynb` installs the lab from GitHub and runs dispersion, the real-limits comparison, and the pilot pipeline.
-- **Install from PyPI (coming):** `pip install gph-qgp` — package builds clean and passes `twine check`; publishing needs a PyPI account + API token (see below).
+- **Install from PyPI:** `pip install gph-qgp` — v0.3.0 is live on PyPI: https://pypi.org/project/gph-qgp/0.3.0/
 
 ## What running it looks like
 
