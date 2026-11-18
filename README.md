@@ -32,12 +32,14 @@ A darker reading of the same architecture — the **quarantine reading** — is 
 
 ## Run the experiments
 
-[`lab/gph-qgp`](lab/gph-qgp) is a runnable Python package (v0.3.0) for exploring the ideas in the paper: modified dispersion relations (linear and quadratic, sub- and superluminal), spacetime foam, collapse toy models (GRW, Diósi–Penrose, CSL), birefringence, the generalized uncertainty principle, neutrino time-of-flight, and the sober blinded pilot analysis pipeline. Install and run one experiment with:
+[`lab/gph-qgp`](lab/gph-qgp) is a runnable Python package (v0.3.0) for exploring the ideas in the paper: modified dispersion relations (linear and quadratic, sub- and superluminal), spacetime foam, collapse toy models (GRW, Diósi–Penrose, CSL), birefringence, the generalized uncertainty principle, neutrino time-of-flight, and the sober blinded pilot analysis pipeline. **Now on PyPI — install it with:**
 
 ```
-pip install -e lab/gph-qgp
+pip install gph-qgp
 python -m gph_qgp run --experiment pilot --out results/
 ```
+
+PyPI: [pypi.org/project/gph-qgp](https://pypi.org/project/gph-qgp/) · No-install Colab notebook: [examples/gph-qgp-colab.ipynb](lab/gph-qgp/examples/gph-qgp-colab.ipynb) · Source: [`lab/gph-qgp`](lab/gph-qgp)
 
 v0.2 adds real published limits and checks the toy models against them:
 

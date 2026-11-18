@@ -6,3 +6,4 @@
 * [Open Questions](open-questions.md)
 * [Contributing](contributing.md)
 * [Start Here](start-here.md)
+* [The Lab](lab.md)

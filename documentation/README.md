@@ -30,9 +30,20 @@ A darker reading of the same architecture — the **quarantine reading** — is 
 | v1.0             | [DOI 10.5281/zenodo.23380886](https://doi.org/10.5281/zenodo.23380886) |
 | v2.0             | [DOI 10.5281/zenodo.23382841](https://doi.org/10.5281/zenodo.23382841) |
 | v3.0             | [DOI 10.5281/zenodo.23424469](https://doi.org/10.5281/zenodo.23424469) |
-| v3.1 (canonical) | [DOI 10.5281/zenodo.23464415](https://doi.org/10.5281/zenodo.23464415) |
+| v3.1 | [DOI 10.5281/zenodo.23464415](https://doi.org/10.5281/zenodo.23464415) |
+| v3.2 (canonical) | [DOI 10.5281/zenodo.24237333](https://doi.org/10.5281/zenodo.24237333) |
 
 See [The Paper](the-paper.md) for the full version history. The [Collaboration](collaboration.md) page is the honest build log: how the papers were made, what's been debunked, and what's still open. The laser read-head experiment protocol (executable 2×2×2 design, with logged independent phenomenology) lives in the repo under `paper/v3/gph-laser-experiment-protocol-DRAFT.md`.
+
+### Run the experiments
+
+The quantum-gravity phenomenology lab ([`gph-qgp`](https://github.com/frankleepink/graduation-protocol/tree/main/lab/gph-qgp)) is a runnable Python package of toy models built around the paper — modified dispersion, spacetime foam, collapse toy models, birefringence, GUP, neutrino time-of-flight, and the sober blinded pilot pipeline. Install it from PyPI:
+
+```
+pip install gph-qgp
+```
+
+Or try it with no install in the [Colab notebook](https://colab.research.google.com/github/frankleepink/graduation-protocol/blob/main/lab/gph-qgp/examples/gph-qgp-colab.ipynb). Every model is checked against real published limits — most are excluded by the data, a few survive. Toy models only, simulated data only, never evidence for the hypothesis. See [the lab page](lab.md) for the full list.
 
 ### Where the theory stands (claim ladder)
 
