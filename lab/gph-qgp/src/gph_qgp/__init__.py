@@ -23,6 +23,12 @@ constraints: real published observational limits and checks of the toy
              models against them
 pilot      : the GPH sober blinded-pilot analysis pipeline (speckle synthesis,
              rater agreement, invariance checks)
+trans_planckian : trans-Planckian sweep of effective QG scales across
+             dispersion / birefringence / superluminal-decay bounds,
+             with a dispersion simulator and log-scale fitter
+trans_planckian_summary : collapse sweep rows into one composite
+             verdict per scale (worst-case logic) and aggregate
+             numeric fit metrics
 cli        : command-line runner (``python -m gph_qgp run --experiment ...``,
              ``python -m gph_qgp compare --out ...``)
 
@@ -34,9 +40,10 @@ analysis pipeline works as designed.
 """
 
 from . import (birefringence, collapse, constraints, dispersion, foam,
-               gup, neutrinos, pilot, superluminal)
+               gup, neutrinos, pilot, superluminal, trans_planckian,
+               trans_planckian_summary)
 
 __version__ = "0.3.0"
 __all__ = ["birefringence", "collapse", "constraints", "dispersion",
            "foam", "gup", "neutrinos", "pilot", "superluminal",
-           "__version__"]
+           "trans_planckian", "trans_planckian_summary", "__version__"]

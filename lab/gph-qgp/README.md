@@ -23,6 +23,8 @@ data and see what the analysis looks like.
 | `neutrinos` | Energy-dependent neutrino speed: SN1987A and TXS 0506+056 time-of-flight delays, IceCube-scale superluminal check. |
 | `constraints` | Real published limits, verified against primary sources: GRB time-of-flight (Abdo 2009, Vasileiou 2013, LHAASO 2024, Yang 2024), LIGO O1 strain floor (Abbott 2016), Ng & van Dam 40-m bounds, Holometer (Chou 2017) — plus v0.3: LHAASO superluminal limits, GRB birefringence (Wei 2025), GUP resonator bound (Bushev 2019), CSL bounds (Carlesso 2016, Majorana 2022, XENONnT 2025), neutrino limits (SN1987A, TXS 0506+056, IceCube). Checks the toy models against them — see "Real limits" below. |
 | `pilot` | The GPH sober blinded-pilot analysis pipeline (v3.2 §06): synthetic speckle generation, blinded-rater agreement (Cohen's κ, Fleiss' κ, Krippendorff's α), and camera-invariance checks. |
+| `trans_planckian` | Trans-Planckian study: 45-point sweep of effective QG scales (0.1×–10⁴× Planck) against the linear-dispersion, birefringence and superluminal-decay bounds; each row carries `obs_at_emax`, the channel's live observable at Emax = 5000 GeV. `lever_arm_analysis()` measures how the fitted log₁₀ E_QG uncertainty shrinks as Emax grows (n=1 vs n=2). |
+| `trans_planckian_summary` | Collapse the sweep into one worst-case verdict per scale, aggregate fit metrics, extract exact verdict-transition intervals, and export the raw + collapsed study bundle as CSV and JSON. |
 
 ## Install
 
@@ -30,7 +32,7 @@ data and see what the analysis looks like.
 pip install -e .
 ```
 
-Python ≥ 3.10. Dependencies: numpy, scipy, matplotlib only.
+Python ≥ 3.10. Dependencies: numpy, scipy, matplotlib, pandas.
 
 ## Quickstart
 
@@ -170,7 +172,3 @@ being silently papered over with a random-number draw.
 
 CC BY 4.0 — see `LICENSE`. Give credit to Walter Hivoina when you
 share or adapt this work.
-
-## Support
-
-Free and open — if the lab is useful to you, you can support the work at [github.com/sponsors/frankleepink](https://github.com/sponsors/frankleepink). Try it free first: [web lab](https://muse.ai/s/gph-quantum-gravity-lab-kxu6xpvxxxttxqxyy/tYgmGxOgGYnIjlKh2Tk5kzJowrIa07dTTiOkSPGiLms).
